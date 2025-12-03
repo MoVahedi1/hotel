@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions - Luxury Hotels Booking">
+    <title>FAQ - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="faq-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="faq.hero.title">Frequently Asked Questions</h1>
+                    <p data-i18n="faq.hero.subtitle">Find answers to common questions about booking, payments, and more</p>
+                    
+                    <!-- Search -->
+                    <div class="faq-search">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="faq-search" placeholder="Search FAQs..." data-i18n-placeholder="faq.searchPlaceholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="section faq-content">
+            <div class="container">
+                <div class="faq-layout">
+                    <!-- Categories Sidebar -->
+                    <aside class="faq-sidebar" role="complementary">
+                        <h3 data-i18n="faq.categories.title">Categories</h3>
+                        <ul class="category-nav">
+                            <li>
+                                <a href="#booking" class="category-link active" data-category="booking">
+                                    <i class="fas fa-bookmark"></i>
+                                    <span data-i18n="faq.categories.booking">Booking & Reservations</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#payment" class="category-link" data-category="payment">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span data-i18n="faq.categories.payment">Payment & Pricing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#account" class="category-link" data-category="account">
+                                    <i class="fas fa-user"></i>
+                                    <span data-i18n="faq.categories.account">Account Management</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#hotels" class="category-link" data-category="hotels">
+                                    <i class="fas fa-hotel"></i>
+                                    <span data-i18n="faq.categories.hotels">Hotels & Amenities</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#policies" class="category-link" data-category="policies">
+                                    <i class="fas fa-file-contract"></i>
+                                    <span data-i18n="faq.categories.policies">Policies & Procedures</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#technical" class="category-link" data-category="technical">
+                                    <i class="fas fa-cog"></i>
+                                    <span data-i18n="faq.categories.technical">Technical Support</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <!-- FAQ Items -->
+                    <div class="faq-main">
+                        <!-- Booking & Reservations -->
+                        <div class="faq-category" id="booking">
+                            <h2 class="category-title">
+                                <i class="fas fa-bookmark"></i>
+                                <span data-i18n="faq.categories.booking">Booking & Reservations</span>
+                            </h2>
+                            
+                            <div class="faq-accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.booking.howToBook.question">How do I make a hotel booking?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.booking.howToBook.answer">Making a booking is simple: 1) Search for your desired hotel and dates, 2) Select your preferred room, 3) Enter guest details, 4) Complete payment. You'll receive a confirmation email within minutes.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.booking.modify.question">Can I modify or cancel my booking?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.booking.modify.answer">Yes, you can modify or cancel your booking through your account dashboard. Modification and cancellation policies vary by hotel and rate type. Most bookings can be cancelled up to 24 hours before check-in for a full refund.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.booking.group.question">How do I make a group booking?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.booking.group.answer">For group bookings (10+ rooms), please contact our group reservations team at groups@luxuryhotels.com or call 1-800-LUXURY-1. We offer special rates and dedicated support for group bookings.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.booking.confirmation.question">I haven't received my booking confirmation. What should I do?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.booking.confirmation.answer">First, check your spam/junk folder. If you still can't find it, contact our support team with your name and booking details. We can resend the confirmation and provide your booking reference number.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment & Pricing -->
+                        <div class="faq-category" id="payment">
+                            <h2 class="category-title">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-i18n="faq.categories.payment">Payment & Pricing</span>
+                            </h2>
+                            
+                            <div class="faq-accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.payment.methods.question">What payment methods do you accept?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.payment.methods.answer">We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and bank transfers for corporate bookings. All payments are processed securely through our encrypted payment gateway.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.payment.secure.question">Is my payment information secure?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.payment.secure.answer">Absolutely. We use industry-standard SSL encryption to protect your data. Our payment gateway is PCI DSS compliant, and we never store your complete credit card information on our servers.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.payment.currency.question">What currency are prices displayed in?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.payment.currency.answer">Prices are displayed in USD by default, but you can change your preferred currency in your account settings. The final charge will be in your local currency at the current exchange rate.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.payment.hidden.question">Are there any hidden fees?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.payment.hidden.answer">No, we believe in transparent pricing. The price you see during booking includes all taxes and fees. Some hotels may charge additional fees for services like parking or resort fees, which are clearly disclosed during booking.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Management -->
+                        <div class="faq-category" id="account">
+                            <h2 class="category-title">
+                                <i class="fas fa-user"></i>
+                                <span data-i18n="faq.categories.account">Account Management</span>
+                            </h2>
+                            
+                            <div class="faq-accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.account.create.question">How do I create an account?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.account.create.answer">Click "Register" in the top navigation, fill in your details, and verify your email address. Account creation is free and takes less than 2 minutes. Members enjoy exclusive deals and faster checkout.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.account.reset.question">How do I reset my password?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.account.reset.answer">Click "Forgot Password" on the login page, enter your email address, and we'll send you a password reset link. The link expires after 24 hours for security reasons.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.account.benefits.question">What are the benefits of creating an account?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.account.benefits.answer">Account holders enjoy: exclusive member rates, faster checkout, booking history management, saved preferences, loyalty points, and personalized recommendations based on your travel history.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotels & Amenities -->
+                        <div class="faq-category" id="hotels">
+                            <h2 class="category-title">
+                                <i class="fas fa-hotel"></i>
+                                <span data-i18n="faq.categories.hotels">Hotels & Amenities</span>
+                            </h2>
+                            
+                            <div class="faq-accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.hotels.amenities.question">What amenities are typically included?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.hotels.amenities.answer">Amenities vary by hotel but commonly include: WiFi, complimentary breakfast, fitness center, swimming pool, spa services, room service, concierge, and business center. Check individual hotel pages for specific amenities.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.hotels.checkin.question">What are the check-in and check-out times?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.hotels.checkin.answer">Standard check-in time is 3:00 PM and check-out is 11:00 AM. Early check-in and late check-out may be available upon request and may incur additional charges.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3 data-i18n="faq.hotels.pets.question">Are pets allowed?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p data-i18n="faq.hotels.pets.answer">Pet policies vary by hotel. Some welcome pets with additional fees, while others don't allow pets. Filter your search by "Pet Friendly" or check the hotel's pet policy before booking.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Still Need Help -->
+                    <div class="faq-help">
+                        <div class="help-card">
+                            <h3 data-i18n="faq.help.title">Still Need Help?</h3>
+                            <p data-i18n="faq.help.subtitle">Can't find the answer you're looking for? Our support team is here to help</p>
+                            <div class="help-actions">
+                                <a href="contact.html" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i>
+                                    <span data-i18n="faq.help.contact">Contact Support</span>
+                                </a>
+                                <a href="tel:1-800-LUXURY-1" class="btn btn-outline">
+                                    <i class="fas fa-phone"></i>
+                                    <span data-i18n="faq.help.call">Call Us</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // FAQ page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize accordions
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                
+                header.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('active');
+                    
+                    // Close all items in the same category
+                    const category = item.closest('.faq-category');
+                    category.querySelectorAll('.accordion-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.accordion-content').style.maxHeight = null;
+                    });
+                    
+                    // Open clicked item if it wasn't open
+                    if (!isOpen) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+            
+            // Category navigation
+            const categoryLinks = document.querySelectorAll('.category-link');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetCategory = this.getAttribute('data-category');
+                    
+                    // Update active state
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll to category
+                    const targetElement = document.getElementById(targetCategory);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('faq-search');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                accordionItems.forEach(item => {
+                    const question = item.querySelector('h3').textContent.toLowerCase();
+                    const answer = item.querySelector('.accordion-content').textContent.toLowerCase();
+                    
+                    if (searchTerm === '' || question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Hide empty categories
+                document.querySelectorAll('.faq-category').forEach(category => {
+                    const visibleItems = category.querySelectorAll('.accordion-item[style="display: block"]');
+                    category.style.display = visibleItems.length > 0 ? 'block' : 'none';
+                });
+            });
+            
+            // Open first accordion item in each category by default
+            document.querySelectorAll('.faq-category').forEach(category => {
+                const firstItem = category.querySelector('.accordion-item');
+                if (firstItem) {
+                    const content = firstItem.querySelector('.accordion-content');
+                    firstItem.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

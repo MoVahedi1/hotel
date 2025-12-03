@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your hotel booking">
+    <title>Checkout - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="checkout-section">
+            <div class="container">
+                <!-- Progress Bar -->
+                <div class="checkout-progress" role="navigation" aria-label="Checkout steps">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label" data-i18n="checkout.steps.guest">Guest Info</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label" data-i18n="checkout.steps.payment">Payment</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label" data-i18n="checkout.steps.confirm">Confirm</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <div class="summary-card">
+                        <h3 data-i18n="checkout.summary.title">Booking Summary</h3>
+                        <div class="summary-hotel">
+                            <img src="../assets/images/hotels/hotel1-hero.jpg" alt="Hotel" id="summary-hotel-image">
+                            <div class="summary-hotel-info">
+                                <h4 id="summary-hotel-name">Grand Plaza Hotel</h4>
+                                <p id="summary-hotel-location">New York, USA</p>
+                                <div class="summary-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span id="summary-hotel-rating">4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span data-i18n="checkout.summary.room">Room:</span>
+                                <span id="summary-room-type">Deluxe Room</span>
+                            </div>
+                            <div class="summary-row">
+                                <span data-i18n="checkout.summary.dates">Dates:</span>
+                                <span id="summary-dates">Mar 15-20, 2024</span>
+                            </div>
+                            <div class="summary-row">
+                                <span data-i18n="checkout.summary.guests">Guests:</span>
+                                <span id="summary-guests">2 Adults</span>
+                            </div>
+                            <div class="summary-row">
+                                <span data-i18n="checkout.summary.nights">Nights:</span>
+                                <span id="summary-nights">5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-pricing">
+                            <div class="price-row">
+                                <span data-i18n="checkout.summary.roomRate">Room Rate:</span>
+                                <span id="summary-room-rate">$189 x 5</span>
+                            </div>
+                            <div class="price-row">
+                                <span data-i18n="checkout.summary.subtotal">Subtotal:</span>
+                                <span id="summary-subtotal">$945</span>
+                            </div>
+                            <div class="price-row">
+                                <span data-i18n="checkout.summary.taxes">Taxes & Fees:</span>
+                                <span id="summary-taxes">$142</span>
+                            </div>
+                            <div class="price-row total">
+                                <span data-i18n="checkout.summary.total">Total:</span>
+                                <span id="summary-total">$1,087</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Forms -->
+                <div class="checkout-forms">
+                    <!-- Step 1: Guest Information -->
+                    <div class="checkout-step active" id="step-1">
+                        <div class="step-header">
+                            <h2 data-i18n="checkout.guest.title">Guest Information</h2>
+                            <p data-i18n="checkout.guest.subtitle">Please provide details for the primary guest</p>
+                        </div>
+                        
+                        <form class="checkout-form" id="guest-form">
+                            <h3 data-i18n="checkout.guest.primaryGuest">Primary Guest</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-firstName" data-i18n="checkout.guest.firstName">First Name *</label>
+                                    <input type="text" id="guest-firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-lastName" data-i18n="checkout.guest.lastName">Last Name *</label>
+                                    <input type="text" id="guest-lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guest-email" data-i18n="checkout.guest.email">Email *</label>
+                                <input type="email" id="guest-email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guest-phone" data-i18n="checkout.guest.phone">Phone *</label>
+                                <input type="tel" id="guest-phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-checkin" data-i18n="checkout.guest.estimatedArrival">Estimated Arrival Time</label>
+                                    <select id="guest-checkin" name="checkinTime">
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-specialRequests" data-i18n="checkout.guest.specialRequests">Special Requests</label>
+                                    <textarea id="guest-specialRequests" name="specialRequests" rows="3" 
+                                              placeholder="Any special requests or preferences?" data-i18n-placeholder="checkout.guest.requestsPlaceholder"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="guest-newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="checkout.guest.newsletter">Send me booking confirmation and updates</span>
+                                </label>
+                            </div>
+                            
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-primary next-step" data-next="2" data-i18n="checkout.continueToPayment">Continue to Payment</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 2: Payment Information -->
+                    <div class="checkout-step" id="step-2">
+                        <div class="step-header">
+                            <h2 data-i18n="checkout.payment.title">Payment Information</h2>
+                            <p data-i18n="checkout.payment.subtitle">Secure payment processing</p>
+                        </div>
+                        
+                        <form class="checkout-form" id="payment-form">
+                            <div class="payment-methods">
+                                <label class="payment-method active">
+                                    <input type="radio" name="paymentMethod" value="card" checked>
+                                    <div class="payment-option">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span data-i18n="checkout.payment.creditCard">Credit Card</span>
+                                    </div>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="paypal">
+                                    <div class="payment-option">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="form-group">
+                                    <label for="card-number" data-i18n="checkout.payment.cardNumber">Card Number *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                        <input type="text" id="card-number" name="cardNumber" required maxlength="19" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="card-name" data-i18n="checkout.payment.cardName">Name on Card *</label>
+                                    <input type="text" id="card-name" name="cardName" required placeholder="John Doe">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-expiry" data-i18n="checkout.payment.expiry">Expiry Date *</label>
+                                        <input type="text" id="card-expiry" name="expiry" required maxlength="5" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-cvv" data-i18n="checkout.payment.cvv">CVV *</label>
+                                        <input type="text" id="card-cvv" name="cvv" required maxlength="4" placeholder="123">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="billing-address" data-i18n="checkout.payment.billingAddress">Billing Address</label>
+                                    <input type="text" id="billing-address" name="billingAddress" placeholder="123 Main Street">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="billing-city" data-i18n="checkout.payment.city">City</label>
+                                        <input type="text" id="billing-city" name="billingCity" placeholder="New York">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing-zip" data-i18n="checkout.payment.zipCode">ZIP Code</label>
+                                        <input type="text" id="billing-zip" name="billingZip" placeholder="10001">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-outline prev-step" data-prev="1" data-i18n="checkout.back">Back</button>
+                                <button type="button" class="btn btn-primary next-step" data-next="3" data-i18n="checkout.reviewBooking">Review Booking</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Confirmation -->
+                    <div class="checkout-step" id="step-3">
+                        <div class="step-header">
+                            <h2 data-i18n="checkout.confirm.title">Review & Confirm</h2>
+                            <p data-i18n="checkout.confirm.subtitle">Please review your booking details before confirming</p>
+                        </div>
+                        
+                        <div class="review-section">
+                            <h3 data-i18n="checkout.confirm.guestDetails">Guest Details</h3>
+                            <div class="review-details" id="review-guest">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                            
+                            <h3 data-i18n="checkout.confirm.paymentDetails">Payment Details</h3>
+                            <div class="review-details" id="review-payment">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="confirm-terms" required>
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="checkout.confirm.terms">I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Cancellation Policy</a></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="confirm-cancellation">
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="checkout.confirm.cancellationProtection">Add cancellation protection for $29</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2" data-i18n="checkout.back">Back</button>
+                            <button type="button" class="btn btn-primary confirm-btn" id="confirm-booking" data-i18n="checkout.confirmBooking">Confirm Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Checkout specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentStep = 1;
+            const totalSteps = 3;
+            
+            // Load booking data from localStorage
+            const bookingData = JSON.parse(localStorage.getItem('currentBooking') || '{}');
+            const searchData = JSON.parse(localStorage.getItem('searchData') || '{}');
+            
+            // Update booking summary
+            updateBookingSummary(bookingData, searchData);
+            
+            // Step navigation
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            
+            nextButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const nextStep = parseInt(this.getAttribute('data-next'));
+                    if (validateStep(currentStep)) {
+                        goToStep(nextStep);
+                    }
+                });
+            });
+            
+            prevButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const prevStep = parseInt(this.getAttribute('data-prev'));
+                    goToStep(prevStep);
+                });
+            });
+            
+            function goToStep(step) {
+                // Update progress bar
+                document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+                document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+                
+                // Update forms
+                document.querySelectorAll('.checkout-step').forEach(s => s.classList.remove('active'));
+                document.getElementById(`step-${step}`).classList.add('active');
+                
+                currentStep = step;
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            function validateStep(step) {
+                if (step === 1) {
+                    const guestForm = document.getElementById('guest-form');
+                    const firstName = document.getElementById('guest-firstName').value;
+                    const lastName = document.getElementById('guest-lastName').value;
+                    const email = document.getElementById('guest-email').value;
+                    const phone = document.getElementById('guest-phone').value;
+                    
+                    if (!firstName || !lastName || !email || !phone) {
+                        showNotification('Please fill in all required fields', 'error');
+                        return false;
+                    }
+                    
+                    if (!validateEmail(email)) {
+                        showNotification('Please enter a valid email address', 'error');
+                        return false;
+                    }
+                    
+                    // Update review section
+                    updateReviewSection();
+                    return true;
+                }
+                
+                if (step === 2) {
+                    const cardNumber = document.getElementById('card-number').value;
+                    const cardName = document.getElementById('card-name').value;
+                    const expiry = document.getElementById('card-expiry').value;
+                    const cvv = document.getElementById('card-cvv').value;
+                    
+                    if (!cardNumber || !cardName || !expiry || !cvv) {
+                        showNotification('Please fill in all payment details', 'error');
+                        return false;
+                    }
+                    
+                    // Update payment review
+                    updatePaymentReview();
+                    return true;
+                }
+                
+                return true;
+            }
+            
+            function updateBookingSummary(booking, search) {
+                // Update hotel info
+                document.getElementById('summary-hotel-name').textContent = booking.hotel?.name || 'Grand Plaza Hotel';
+                document.getElementById('summary-hotel-location').textContent = booking.hotel?.location?.city || 'New York, USA';
+                document.getElementById('summary-hotel-rating').textContent = booking.hotel?.rating || '4.5';
+                
+                // Update dates and guests
+                if (search.checkin && search.checkout) {
+                    const checkin = new Date(search.checkin);
+                    const checkout = new Date(search.checkout);
+                    const nights = calculateNights(search.checkin, search.checkout);
+                    
+                    document.getElementById('summary-dates').textContent = formatDateRange(search.checkin, search.checkout);
+                    document.getElementById('summary-nights').textContent = nights;
+                }
+                
+                document.getElementById('summary-guests').textContent = `${search.adults || 2} Adults${search.children > 0 ? `, ${search.children} Children` : ''}`;
+                
+                // Update pricing
+                const roomPrice = booking.room?.price || 189;
+                const nights = parseInt(document.getElementById('summary-nights').textContent) || 5;
+                const subtotal = roomPrice * nights;
+                const taxes = subtotal * 0.15;
+                const total = subtotal + taxes;
+                
+                document.getElementById('summary-room-type').textContent = booking.room?.type || 'Deluxe Room';
+                document.getElementById('summary-room-rate').textContent = `$${roomPrice} x ${nights}`;
+                document.getElementById('summary-subtotal').textContent = `$${subtotal}`;
+                document.getElementById('summary-taxes').textContent = `$${taxes.toFixed(2)}`;
+                document.getElementById('summary-total').textContent = `$${total.toFixed(2)}`;
+            }
+            
+            function updateReviewSection() {
+                const firstName = document.getElementById('guest-firstName').value;
+                const lastName = document.getElementById('guest-lastName').value;
+                const email = document.getElementById('guest-email').value;
+                const phone = document.getElementById('guest-phone').value;
+                const checkinTime = document.getElementById('guest-checkin').value;
+                const specialRequests = document.getElementById('guest-specialRequests').value;
+                
+                document.getElementById('review-guest').innerHTML = `
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.name">Name:</span>
+                        <span>${firstName} ${lastName}</span>
+                    </div>
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.email">Email:</span>
+                        <span>${email}</span>
+                    </div>
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.phone">Phone:</span>
+                        <span>${phone}</span>
+                    </div>
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.arrivalTime">Arrival Time:</span>
+                        <span>${checkinTime}</span>
+                    </div>
+                    ${specialRequests ? `
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.specialRequests">Special Requests:</span>
+                        <span>${specialRequests}</span>
+                    </div>
+                    ` : ''}
+                `;
+            }
+            
+            function updatePaymentReview() {
+                const cardNumber = document.getElementById('card-number').value;
+                const cardName = document.getElementById('card-name').value;
+                const billingAddress = document.getElementById('billing-address').value;
+                const billingCity = document.getElementById('billing-city').value;
+                const billingZip = document.getElementById('billing-zip').value;
+                
+                // Mask card number
+                const maskedCard = '**** **** **** ' + cardNumber.slice(-4);
+                
+                document.getElementById('review-payment').innerHTML = `
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.paymentMethod">Payment Method:</span>
+                        <span>Credit Card (${maskedCard})</span>
+                    </div>
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.cardName">Name on Card:</span>
+                        <span>${cardName}</span>
+                    </div>
+                    <div class="review-row">
+                        <span data-i18n="checkout.confirm.billingAddress">Billing Address:</span>
+                        <span>${billingAddress}, ${billingCity}, ${billingZip}</span>
+                    </div>
+                `;
+            }
+            
+            // Confirm booking
+            document.getElementById('confirm-booking').addEventListener('click', function() {
+                const termsAccepted = document.getElementById('confirm-terms').checked;
+                
+                if (!termsAccepted) {
+                    showNotification('Please accept the terms and conditions', 'error');
+                    return;
+                }
+                
+                // Simulate booking confirmation
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                
+                setTimeout(() => {
+                    // Generate booking ID
+                    const bookingId = 'BK' + Date.now();
+                    
+                    // Save booking
+                    const finalBooking = {
+                        id: bookingId,
+                        ...bookingData,
+                        guest: {
+                            firstName: document.getElementById('guest-firstName').value,
+                            lastName: document.getElementById('guest-lastName').value,
+                            email: document.getElementById('guest-email').value,
+                            phone: document.getElementById('guest-phone').value
+                        },
+                        status: 'confirmed',
+                        createdAt: new Date().toISOString()
+                    };
+                    
+                    let bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+                    bookings.push(finalBooking);
+                    localStorage.setItem('bookings', JSON.stringify(bookings));
+                    
+                    // Clear current booking
+                    localStorage.removeItem('currentBooking');
+                    
+                    // Show success message and redirect
+                    showNotification(`Booking confirmed! Your booking ID is ${bookingId}`, 'success');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'profile.html?tab=bookings';
+                    }, 2000);
+                }, 2000);
+            });
+            
+            // Payment method selection
+            document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+                    this.closest('.payment-method').classList.add('active');
+                });
+            });
+            
+            // Card number formatting
+            document.getElementById('card-number').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s/g, '');
+                let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+                e.target.value = formattedValue;
+            });
+            
+            // Expiry date formatting
+            document.getElementById('card-expiry').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search results for luxury hotels">
+    <title>Search Results - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link active" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Search Summary -->
+        <section class="search-summary">
+            <div class="container">
+                <div class="search-summary-content">
+                    <h1 data-i18n="search.results.title">Search Results</h1>
+                    <p class="search-info">
+                        <span id="search-location">New York</span> • 
+                        <span id="search-dates">Mar 15-20, 2024</span> • 
+                        <span id="search-guests">2 Guests, 1 Room</span>
+                    </p>
+                    <p class="results-count" data-i18n="search.results.count">Found <span id="results-count">24</span> hotels</p>
+                </div>
+                
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="List view">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-layout">
+                    <!-- Filters Sidebar -->
+                    <aside class="search-filters" role="complementary">
+                        <h2 data-i18n="search.filters.title">Filters</h2>
+                        
+                        <!-- Price Range -->
+                        <div class="filter-group">
+                            <h3 data-i18n="search.filters.price">Price Range</h3>
+                            <div class="price-range">
+                                <div class="price-inputs">
+                                    <input type="number" id="min-price" placeholder="Min" value="0">
+                                    <span>-</span>
+                                    <input type="number" id="max-price" placeholder="Max" value="500">
+                                </div>
+                                <div class="price-slider" id="price-slider">
+                                    <div class="slider-track"></div>
+                                    <div class="slider-range"></div>
+                                    <div class="slider-thumb min"></div>
+                                    <div class="slider-thumb max"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Star Rating -->
+                        <div class="filter-group">
+                            <h3 data-i18n="search.filters.rating">Star Rating</h3>
+                            <div class="rating-filters">
+                                <label class="rating-filter">
+                                    <input type="checkbox" value="5">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">5</span>
+                                </label>
+                                <label class="rating-filter">
+                                    <input type="checkbox" value="4">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">4</span>
+                                </label>
+                                <label class="rating-filter">
+                                    <input type="checkbox" value="3">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">3</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Room Type -->
+                        <div class="filter-group">
+                            <h3 data-i18n="search.filters.roomType">Room Type</h3>
+                            <div class="checkbox-filters">
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="standard">
+                                    <span data-i18n="search.roomTypes.standard">Standard Room</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="deluxe">
+                                    <span data-i18n="search.roomTypes.deluxe">Deluxe Room</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="suite">
+                                    <span data-i18n="search.roomTypes.suite">Suite</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="executive">
+                                    <span data-i18n="search.roomTypes.executive">Executive Suite</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div class="filter-group">
+                            <h3 data-i18n="search.filters.amenities">Amenities</h3>
+                            <div class="checkbox-filters">
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="wifi">
+                                    <i class="fas fa-wifi"></i>
+                                    <span data-i18n="search.amenities.wifi">Free WiFi</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="parking">
+                                    <i class="fas fa-parking"></i>
+                                    <span data-i18n="search.amenities.parking">Free Parking</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="pool">
+                                    <i class="fas fa-swimming-pool"></i>
+                                    <span data-i18n="search.amenities.pool">Swimming Pool</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="gym">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <span data-i18n="search.amenities.gym">Fitness Center</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="spa">
+                                    <i class="fas fa-spa"></i>
+                                    <span data-i18n="search.amenities.spa">Spa</span>
+                                </label>
+                                <label class="checkbox-filter">
+                                    <input type="checkbox" value="restaurant">
+                                    <i class="fas fa-utensils"></i>
+                                    <span data-i18n="search.amenities.restaurant">Restaurant</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button class="btn btn-primary btn--full" id="apply-filters" data-i18n="search.filters.apply">Apply Filters</button>
+                    </aside>
+
+                    <!-- Results -->
+                    <div class="search-results">
+                        <!-- Sort Options -->
+                        <div class="sort-options">
+                            <label for="sort-select" data-i18n="search.sort.label">Sort by:</label>
+                            <select id="sort-select" class="sort-select">
+                                <option value="recommended" data-i18n="search.sort.recommended">Recommended</option>
+                                <option value="price-low" data-i18n="search.sort.priceLow">Price (Low to High)</option>
+                                <option value="price-high" data-i18n="search.sort.priceHigh">Price (High to Low)</option>
+                                <option value="rating" data-i18n="search.sort.rating">Guest Rating</option>
+                                <option value="distance" data-i18n="search.sort.distance">Distance</option>
+                            </select>
+                        </div>
+
+                        <!-- Results Grid -->
+                        <div class="hotels-grid" id="hotels-grid">
+                            <!-- Hotel cards will be populated by JavaScript -->
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination" id="pagination">
+                            <!-- Pagination will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+</body>
+</html>

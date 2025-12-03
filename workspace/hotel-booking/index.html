@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website - Professional Workspace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            animation: fadeInUp 1s ease-out;
+            animation-delay: calc(var(--index) * 0.05s);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card:nth-child(1) { --index: 0; }
+        .card:nth-child(2) { --index: 1; }
+        .card:nth-child(3) { --index: 2; }
+        .card:nth-child(4) { --index: 3; }
+        
+        .gallery-item:nth-child(1) { --index: 0; }
+        .gallery-item:nth-child(2) { --index: 1; }
+        .gallery-item:nth-child(3) { --index: 2; }
+        .gallery-item:nth-child(4) { --index: 3; }
+        .gallery-item:nth-child(5) { --index: 4; }
+        .gallery-item:nth-child(6) { --index: 5; }
+        .gallery-item:nth-child(7) { --index: 6; }
+        .gallery-item:nth-child(8) { --index: 7; }
+        .gallery-item:nth-child(9) { --index: 8; }
+        .gallery-item:nth-child(10) { --index: 9; }
+        .gallery-item:nth-child(11) { --index: 10; }
+        .gallery-item:nth-child(12) { --index: 11; }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Hotel Booking Website</h1>
+            <p class="subtitle">Professional Workspace & Photo Gallery</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Hotel Photos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Room Photos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">14</div>
+                <div class="stat-label">HTML Pages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">CSS Files</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">JS Files</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Data Files</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Responsive</div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-images"></i> Photo Gallery</h3>
+                <p>Browse our complete collection of AI-generated hotel and room photos. All images are high-resolution and professionally optimized for web use.</p>
+                <a href="images/">
+                    <i class="fas fa-arrow-right"></i> View Photos
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-code"></i> Source Code</h3>
+                <p>Complete HTML, CSS, and JavaScript files for the hotel booking website. Includes responsive design, animations, and modern features.</p>
+                <a href="pages/">
+                    <i class="fas fa-arrow-right"></i> View Pages
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-palette"></i> Design Assets</h3>
+                <p>Professional CSS files with design system, components, responsive styles, and enhanced visual effects for modern web development.</p>
+                <a href="css/">
+                    <i class="fas fa-arrow-right"></i> View Styles
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-cogs"></i> Interactive Features</h3>
+                <p>Advanced JavaScript functionality including search, booking, language switching, and smooth animations throughout the user experience.</p>
+                <a href="js/">
+                    <i class="fas fa-arrow-right"></i> View Scripts
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/hotels/hotel1-hero.jpg" alt="Luxury Hotel">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hotels/hotel2-hero.jpg" alt="Beach Resort">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hotels/hotel3-hero.jpg" alt="Mountain Lodge">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hotels/hotel-spa.jpg" alt="Hotel Spa">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hotels/hotel-restaurant.jpg" alt="Fine Dining">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hotels/hotel-gym.jpg" alt="Fitness Center">
+            </div>
+            <div class="gallery-item">
+                <img src="images/rooms/deluxe-room-1.jpg" alt="Deluxe Room">
+            </div>
+            <div class="gallery-item">
+                <img src="images/rooms/suite-room-1.jpg" alt="Executive Suite">
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-hotel"></i> Live Website</h3>
+                <p>Experience the ultra-premium hotel booking website with cutting-edge 3D effects, glassmorphism design, and advanced animations.</p>
+                <a href="/hotel-booking/index.html" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Open Website
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-book"></i> Documentation</h3>
+                <p>Comprehensive documentation including project overview, technical specifications, and development guidelines.</p>
+                <a href="README.md">
+                    <i class="fas fa-arrow-right"></i> Read Docs
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-database"></i> Data Files</h3>
+                <p>Hotel database with complete information and translation files for multi-language support.</p>
+                <a href="data/">
+                    <i class="fas fa-arrow-right"></i> View Data
+                </a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-download"></i> Download All</h3>
+                <p>Get the complete project package including all source files, assets, and documentation.</p>
+                <a href="#" onclick="alert('Download feature coming soon!')">
+                    <i class="fas fa-download"></i> Download ZIP
+                </a>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2024 Hotel Booking Website - Professional Workspace | Created with ❤️ and cutting-edge technology</p>
+        </footer>
+    </div>
+</body>
+</html>

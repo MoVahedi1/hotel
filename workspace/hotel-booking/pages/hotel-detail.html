@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel details and room booking">
+    <title>Grand Plaza Hotel - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hotel Hero Section -->
+        <section class="hotel-hero">
+            <div class="hotel-gallery" id="hotel-gallery">
+                <div class="main-image">
+                    <img src="../assets/images/hotels/hotel1-hero.jpg" alt="Grand Plaza Hotel" id="main-hotel-image">
+                    <button class="gallery-btn prev" id="gallery-prev" aria-label="Previous image">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-btn next" id="gallery-next" aria-label="Next image">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="fullscreen-btn" id="fullscreen-btn" aria-label="Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-strip" id="thumbnail-strip">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotel Information -->
+        <section class="hotel-info">
+            <div class="container">
+                <div class="hotel-header">
+                    <div class="hotel-title-section">
+                        <h1 id="hotel-name">Grand Plaza Hotel</h1>
+                        <div class="hotel-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.5</span>
+                            <span class="review-count">(324 reviews)</span>
+                        </div>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="hotel-location">Manhattan, New York City</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-price">
+                        <div class="price-label">From</div>
+                        <div class="price-amount">$<span id="hotel-price">189</span></div>
+                        <div class="price-period">per night</div>
+                    </div>
+                </div>
+
+                <!-- Quick Booking -->
+                <div class="quick-booking">
+                    <form class="booking-form" id="quick-booking-form">
+                        <div class="booking-fields">
+                            <div class="form-group">
+                                <label for="checkin-detail" data-i18n="booking.checkIn">Check-in</label>
+                                <input type="date" id="checkin-detail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-detail" data-i18n="booking.checkOut">Check-out</label>
+                                <input type="date" id="checkout-detail" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="booking.guests">Guests</label>
+                                <select id="guests-detail">
+                                    <option value="1">1 Guest</option>
+                                    <option value="2" selected>2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn--large" data-i18n="hotel.checkAvailability">Check Availability</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotel Details Tabs -->
+        <section class="hotel-details">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-nav" role="tablist">
+                        <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true" data-i18n="hotel.tabs.overview">Overview</button>
+                        <button class="tab-btn" data-tab="rooms" role="tab" aria-selected="false" data-i18n="hotel.tabs.rooms">Rooms</button>
+                        <button class="tab-btn" data-tab="amenities" role="tab" aria-selected="false" data-i18n="hotel.tabs.amenities">Amenities</button>
+                        <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false" data-i18n="hotel.tabs.reviews">Reviews</button>
+                        <button class="tab-btn" data-tab="location" role="tab" aria-selected="false" data-i18n="hotel.tabs.location">Location</button>
+                    </div>
+
+                    <div class="tabs-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane active" id="overview" role="tabpanel">
+                            <div class="hotel-description">
+                                <h2 data-i18n="hotel.overview.title">About This Hotel</h2>
+                                <p id="hotel-description">
+                                    Experience luxury at its finest at the Grand Plaza Hotel, located in the heart of Manhattan. 
+                                    Our 5-star establishment combines elegant accommodations with world-class service, 
+                                    offering guests an unforgettable stay in New York City. With stunning city views, 
+                                    gourmet dining options, and a state-of-the-art spa, we cater to discerning travelers 
+                                    seeking the ultimate urban retreat.
+                                </p>
+                                <p>
+                                    The hotel features 450 spacious rooms and suites, each meticulously designed with 
+                                    contemporary furnishings and premium amenities. Our dedicated concierge team is available 
+                                    24/7 to assist with dinner reservations, theater tickets, and personalized recommendations 
+                                    for exploring the city.
+                                </p>
+                            </div>
+
+                            <div class="hotel-highlights">
+                                <h3 data-i18n="hotel.overview.highlights">Highlights</h3>
+                                <div class="highlights-grid">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-wifi"></i>
+                                        <span data-i18n="hotel.overview.freeWifi">Free High-Speed WiFi</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-swimming-pool"></i>
+                                        <span data-i18n="hotel.overview.rooftopPool">Rooftop Infinity Pool</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-spa"></i>
+                                        <span data-i18n="hotel.overview.luxurySpa">Luxury Spa & Wellness</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-utensils"></i>
+                                        <span data-i18n="hotel.overview.fineDining">Fine Dining Restaurant</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-dumbbell"></i>
+                                        <span data-i18n="hotel.overview.fitness">24/7 Fitness Center</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-concierge-bell"></i>
+                                        <span data-i18n="hotel.overview.concierge">Personal Concierge</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rooms Tab -->
+                        <div class="tab-pane" id="rooms" role="tabpanel">
+                            <h2 data-i18n="hotel.rooms.title">Available Rooms</h2>
+                            <div class="rooms-grid" id="rooms-grid">
+                                <!-- Room cards will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Amenities Tab -->
+                        <div class="tab-pane" id="amenities" role="tabpanel">
+                            <h2 data-i18n="hotel.amenities.title">Hotel Amenities</h2>
+                            <div class="amenities-grid">
+                                <div class="amenity-category">
+                                    <h3><i class="fas fa-bed"></i> <span data-i18n="hotel.amenities.bedroom">Bedroom</span></h3>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.luxuryLinens">Premium Luxury Linens</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.pillowMenu">Pillow Menu</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.blackout">Blackout Curtains</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.minibar">Stocked Minibar</span></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="amenity-category">
+                                    <h3><i class="fas fa-bath"></i> <span data-i18n="hotel.amenities.bathroom">Bathroom</span></h3>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.marble">Marble Bathroom</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.rainfall">Rainfall Shower</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.bathrobes">Plush Bathrobes</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.toiletries">Premium Toiletries</span></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="amenity-category">
+                                    <h3><i class="fas fa-tv"></i> <span data-i18n="hotel.amenities.entertainment">Entertainment</span></h3>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.smartTV">55" Smart TV</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.netflix">Netflix & Streaming</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.surround">Surround Sound</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.workspace">Workspace Area</span></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="amenity-category">
+                                    <h3><i class="fas fa-dumbbell"></i> <span data-i18n="hotel.amenities.wellness">Wellness</span></h3>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.fitness24">24/7 Fitness Center</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.spaServices">Full Spa Services</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.pool">Heated Indoor Pool</span></li>
+                                        <li><i class="fas fa-check"></i> <span data-i18n="hotel.amenities.yoga">Yoga Studio</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Tab -->
+                        <div class="tab-pane" id="reviews" role="tabpanel">
+                            <div class="reviews-header">
+                                <h2 data-i18n="hotel.reviews.title">Guest Reviews</h2>
+                                <div class="reviews-summary">
+                                    <div class="overall-rating">
+                                        <div class="rating-number">4.5</div>
+                                        <div class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <div class="rating-text">Based on 324 reviews</div>
+                                    </div>
+                                    <div class="rating-breakdown">
+                                        <div class="rating-row">
+                                            <span>5</span>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill" style="width: 65%"></div>
+                                            </div>
+                                            <span>65%</span>
+                                        </div>
+                                        <div class="rating-row">
+                                            <span>4</span>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill" style="width: 20%"></div>
+                                            </div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="rating-row">
+                                            <span>3</span>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill" style="width: 10%"></div>
+                                            </div>
+                                            <span>10%</span>
+                                        </div>
+                                        <div class="rating-row">
+                                            <span>2</span>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill" style="width: 3%"></div>
+                                            </div>
+                                            <span>3%</span>
+                                        </div>
+                                        <div class="rating-row">
+                                            <span>1</span>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill" style="width: 2%"></div>
+                                            </div>
+                                            <span>2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="reviews-list" id="reviews-list">
+                                <!-- Reviews will be populated by JavaScript -->
+                            </div>
+                            
+                            <div class="reviews-pagination" id="reviews-pagination">
+                                <!-- Pagination will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Location Tab -->
+                        <div class="tab-pane" id="location" role="tabpanel">
+                            <h2 data-i18n="hotel.location.title">Location</h2>
+                            <div class="location-content">
+                                <div class="location-info">
+                                    <div class="address-card">
+                                        <h3 data-i18n="hotel.location.address">Address</h3>
+                                        <p id="hotel-address">
+                                            1235 Avenue of the Americas<br>
+                                            New York, NY 10019<br>
+                                            United States
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="transportation">
+                                        <h3 data-i18n="hotel.location.transportation">Transportation</h3>
+                                        <ul>
+                                            <li><i class="fas fa-subway"></i> <span data-i18n="hotel.location.subway">Subway: 2 blocks to 47-50 Sts-Rockefeller Ctr</span></li>
+                                            <li><i class="fas fa-train"></i> <span data-i18n="hotel.location.train">Train: 0.5 miles to Penn Station</span></li>
+                                            <li><i class="fas fa-plane"></i> <span data-i18n="hotel.location.airport">Airport: 45 minutes to JFK</span></li>
+                                            <li><i class="fas fa-bus"></i> <span data-i18n="hotel.location.bus">Bus: Direct lines to all major areas</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="nearby-attractions">
+                                        <h3 data-i18n="hotel.location.attractions">Nearby Attractions</h3>
+                                        <ul>
+                                            <li><i class="fas fa-landmark"></i> Times Square - 0.3 miles</li>
+                                            <li><i class="fas fa-theater-masks"></i> Broadway Theaters - 0.2 miles</li>
+                                            <li><i class="fas fa-tree"></i> Central Park - 0.8 miles</li>
+                                            <li><i class="fas fa-store"></i> 5th Avenue Shopping - 0.4 miles</li>
+                                            <li><i class="fas fa-university"></i> MoMA - 0.6 miles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="location-map">
+                                    <div class="map-container">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919355!2d-73.97967268459418!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1635959841317!5m2!1sen!2sus"
+                                            width="100%" 
+                                            height="400" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy"
+                                            aria-label="Hotel location map">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Similar Hotels -->
+        <section class="similar-hotels section">
+            <div class="container">
+                <h2 data-i18n="hotel.similar.title">Similar Hotels</h2>
+                <div class="similar-grid" id="similar-grid">
+                    <!-- Similar hotels will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+</body>
+</html>
