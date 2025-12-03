@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Luxury Hotels account">
+    <title>Login - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h1 data-i18n="login.title">Welcome Back</h1>
+                            <p data-i18n="login.subtitle">Sign in to your account to access bookings and preferences</p>
+                        </div>
+                        
+                        <form class="auth-form" id="login-form">
+                            <div class="form-group">
+                                <label for="email" data-i18n="login.email">Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" required 
+                                           placeholder="Enter your email" data-i18n-placeholder="login.emailPlaceholder">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" data-i18n="login.password">Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" required 
+                                           placeholder="Enter your password" data-i18n-placeholder="login.passwordPlaceholder">
+                                    <button type="button" class="password-toggle" id="password-toggle" aria-label="Toggle password visibility">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="login.remember">Remember me</span>
+                                </label>
+                                <a href="#" class="forgot-link" data-i18n="login.forgot">Forgot password?</a>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn--full btn--large" data-i18n="login.signIn">Sign In</button>
+                        </form>
+                        
+                        <div class="auth-divider">
+                            <span data-i18n="login.or">OR</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="btn btn-outline btn--full social-btn google">
+                                <i class="fab fa-google"></i>
+                                <span data-i18n="login.google">Continue with Google</span>
+                            </button>
+                            <button type="button" class="btn btn-outline btn--full social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span data-i18n="login.facebook">Continue with Facebook</span>
+                            </button>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p data-i18n="login.noAccount">Don't have an account?</p>
+                            <a href="register.html" class="btn-link" data-i18n="login.signUp">Sign Up</a>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-info">
+                        <div class="info-card">
+                            <h3 data-i18n="login.benefits.title">Why Join Us?</h3>
+                            <ul class="benefits-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-i18n="login.benefits.bookings">View and manage your bookings</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-i18n="login.benefits.deals">Get exclusive member deals</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-i18n="login.benefits.favorites">Save favorite hotels</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-i18n="login.benefits.checkout">Faster checkout process</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Login specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const passwordToggle = document.getElementById('password-toggle');
+            const passwordInput = document.getElementById('password');
+            
+            // Password visibility toggle
+            passwordToggle.addEventListener('click', function() {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+                this.querySelector('i').className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+            });
+            
+            // Form submission
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(loginForm);
+                const loginData = {
+                    email: formData.get('email'),
+                    password: formData.get('password'),
+                    remember: formData.get('remember') === 'on'
+                };
+                
+                // Simulate login (in real app, this would be an API call)
+                if (loginData.email && loginData.password) {
+                    // Store user session
+                    localStorage.setItem('userLoggedIn', 'true');
+                    localStorage.setItem('userEmail', loginData.email);
+                    
+                    // Show success message
+                    showNotification('Login successful! Redirecting...', 'success');
+                    
+                    // Redirect to profile or previous page
+                    setTimeout(() => {
+                        const returnUrl = new URLSearchParams(window.location.search).get('return') || 'profile.html';
+                        window.location.href = returnUrl;
+                    }, 1500);
+                } else {
+                    showNotification('Please fill in all fields', 'error');
+                }
+            });
+            
+            // Social login handlers
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const provider = this.classList.contains('google') ? 'Google' : 'Facebook';
+                    showNotification(`${provider} login would be implemented here`, 'info');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Hotel Booking - Find and book perfect hotels worldwide">
+    <meta name="keywords" content="hotel, booking, travel, accommodation, luxury">
+    <meta name="author" content="Luxury Hotel Booking">
+    <title>Luxury Hotel Booking - Find Your Perfect Stay</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                        <li><a href="pages/search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="pages/about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="pages/login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="pages/register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section with Slider -->
+        <section class="hero" role="banner">
+            <div class="hero-slider" id="hero-slider">
+                <div class="hero-slide active" style="background-image: url('assets/images/hotels/hotel1-hero.jpg')">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-i18n="hero.title">Find Your Perfect Stay</h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">Discover luxury hotels worldwide at unbeatable prices</p>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hotels/hotel2-hero.jpg')">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-i18n="hero.title2">Experience Excellence</h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle2">Premium accommodations for discerning travelers</p>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hotels/hotel3-hero.jpg')">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-i18n="hero.title3">Book with Confidence</h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle3">Best price guarantee and 24/7 customer support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Form -->
+            <div class="search-container">
+                <form class="search-form" id="search-form">
+                    <div class="search-grid">
+                        <div class="form-group">
+                            <label for="checkin" data-i18n="booking.checkIn">Check-in</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout" data-i18n="booking.checkOut">Check-out</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="booking.guests">Guests</label>
+                            <div class="guest-selector">
+                                <button type="button" class="guest-btn" id="guest-btn">
+                                    <span id="guest-text">2 Adults, 1 Room</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="guest-dropdown" id="guest-dropdown">
+                                    <div class="guest-row">
+                                        <label data-i18n="booking.adults">Adults</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" data-target="adults">-</button>
+                                            <span class="counter-value" id="adults-count">2</span>
+                                            <button type="button" class="counter-btn plus" data-target="adults">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="guest-row">
+                                        <label data-i18n="booking.children">Children</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" data-target="children">-</button>
+                                            <span class="counter-value" id="children-count">0</span>
+                                            <button type="button" class="counter-btn plus" data-target="children">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="guest-row">
+                                        <label data-i18n="booking.rooms">Rooms</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" data-target="rooms">-</button>
+                                            <span class="counter-value" id="rooms-count">1</span>
+                                            <button type="button" class="counter-btn plus" data-target="rooms">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group--submit">
+                            <button type="submit" class="btn btn-primary btn--full" data-i18n="booking.search">Search Hotels</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="slider-prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="slider-next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-dots" id="slider-dots"></div>
+        </section>
+
+        <!-- Featured Deals Section -->
+        <section class="section featured-deals" aria-labelledby="deals-heading">
+            <div class="container">
+                <h2 id="deals-heading" class="section-title" data-i18n="deals.title">Featured Deals</h2>
+                <p class="section-subtitle" data-i18n="deals.subtitle">Limited time offers on luxury accommodations</p>
+                
+                <div class="deals-grid" id="deals-grid">
+                    <!-- Deals will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="section-title" data-i18n="testimonials.title">What Our Guests Say</h2>
+                <p class="section-subtitle" data-i18n="testimonials.subtitle">Real experiences from real travelers</p>
+                
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                    <button class="testimonial-btn prev" id="testimonial-prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonial-btn next" id="testimonial-next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="testimonial-dots" id="testimonial-dots"></div>
+            </div>
+        </section>
+
+        <!-- Popular Destinations Section -->
+        <section class="section destinations" aria-labelledby="destinations-heading">
+            <div class="container">
+                <h2 id="destinations-heading" class="section-title" data-i18n="destinations.title">Popular Destinations</h2>
+                <p class="section-subtitle" data-i18n="destinations.subtitle">Explore the world's most sought-after locations</p>
+                
+                <div class="destinations-grid" id="destinations-grid">
+                    <!-- Destinations will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="pages/contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="pages/faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="pages/blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/booking.js"></script>
+    <script src="assets/js/utils.js"></script>
+</body>
+</html>

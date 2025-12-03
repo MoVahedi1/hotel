@@ -1,0 +1,348 @@
+{
+  "en": {
+    "brand": {
+      "name": "Luxury Hotels"
+    },
+    "nav": {
+      "home": "Home",
+      "hotels": "Hotels",
+      "deals": "Deals",
+      "about": "About",
+      "contact": "Contact",
+      "login": "Login",
+      "register": "Register"
+    },
+    "hero": {
+      "title": "Find Your Perfect Stay",
+      "subtitle": "Discover luxury hotels worldwide at unbeatable prices",
+      "title2": "Experience Excellence",
+      "subtitle2": "Premium accommodations for discerning travelers",
+      "title3": "Book with Confidence",
+      "subtitle3": "Best price guarantee and 24/7 customer support"
+    },
+    "booking": {
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Guests",
+      "rooms": "Rooms",
+      "search": "Search Hotels",
+      "adults": "Adults",
+      "children": "Children"
+    },
+    "deals": {
+      "title": "Featured Deals",
+      "subtitle": "Limited time offers on luxury accommodations"
+    },
+    "testimonials": {
+      "title": "What Our Guests Say",
+      "subtitle": "Real experiences from real travelers"
+    },
+    "destinations": {
+      "title": "Popular Destinations",
+      "subtitle": "Explore the world's most sought-after locations"
+    },
+    "search": {
+      "results": {
+        "title": "Search Results",
+        "count": "Found <span id=\"results-count\">24</span> hotels"
+      },
+      "filters": {
+        "title": "Filters",
+        "price": "Price Range",
+        "rating": "Star Rating",
+        "roomType": "Room Type",
+        "amenities": "Amenities",
+        "apply": "Apply Filters"
+      },
+      "roomTypes": {
+        "standard": "Standard Room",
+        "deluxe": "Deluxe Room",
+        "suite": "Suite",
+        "executive": "Executive Suite"
+      },
+      "amenities": {
+        "wifi": "Free WiFi",
+        "parking": "Free Parking",
+        "pool": "Swimming Pool",
+        "gym": "Fitness Center",
+        "spa": "Spa",
+        "restaurant": "Restaurant"
+      },
+      "sort": {
+        "label": "Sort by:",
+        "recommended": "Recommended",
+        "priceLow": "Price (Low to High)",
+        "priceHigh": "Price (High to Low)",
+        "rating": "Guest Rating",
+        "distance": "Distance"
+      }
+    },
+    "hotel": {
+      "checkAvailability": "Check Availability",
+      "tabs": {
+        "overview": "Overview",
+        "rooms": "Rooms",
+        "amenities": "Amenities",
+        "reviews": "Reviews",
+        "location": "Location"
+      },
+      "overview": {
+        "title": "About This Hotel",
+        "highlights": "Highlights",
+        "freeWifi": "Free High-Speed WiFi",
+        "rooftopPool": "Rooftop Infinity Pool",
+        "luxurySpa": "Luxury Spa & Wellness",
+        "fineDining": "Fine Dining Restaurant",
+        "fitness": "24/7 Fitness Center",
+        "concierge": "Personal Concierge"
+      },
+      "rooms": {
+        "title": "Available Rooms"
+      },
+      "amenities": {
+        "title": "Hotel Amenities",
+        "bedroom": "Bedroom",
+        "bathroom": "Bathroom",
+        "entertainment": "Entertainment",
+        "wellness": "Wellness",
+        "luxuryLinens": "Premium Luxury Linens",
+        "pillowMenu": "Pillow Menu",
+        "blackout": "Blackout Curtains",
+        "minibar": "Stocked Minibar",
+        "marble": "Marble Bathroom",
+        "rainfall": "Rainfall Shower",
+        "bathrobes": "Plush Bathrobes",
+        "toiletries": "Premium Toiletries",
+        "smartTV": "55\" Smart TV",
+        "netflix": "Netflix & Streaming",
+        "surround": "Surround Sound",
+        "workspace": "Workspace Area",
+        "fitness24": "24/7 Fitness Center",
+        "spaServices": "Full Spa Services",
+        "pool": "Heated Indoor Pool",
+        "yoga": "Yoga Studio"
+      },
+      "reviews": {
+        "title": "Guest Reviews"
+      },
+      "location": {
+        "title": "Location",
+        "address": "Address",
+        "transportation": "Transportation",
+        "attractions": "Nearby Attractions",
+        "subway": "Subway: 2 blocks to 47-50 Sts-Rockefeller Ctr",
+        "train": "Train: 0.5 miles to Penn Station",
+        "airport": "Airport: 45 minutes to JFK",
+        "bus": "Bus: Direct lines to all major areas"
+      },
+      "similar": {
+        "title": "Similar Hotels"
+      }
+    },
+    "footer": {
+      "about": {
+        "title": "About Luxury Hotels",
+        "description": "Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure."
+      },
+      "quickLinks": {
+        "title": "Quick Links",
+        "about": "About Us",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "careers": "Careers"
+      },
+      "services": {
+        "title": "Services",
+        "hotelBooking": "Hotel Booking",
+        "flightBooking": "Flight Booking",
+        "carRental": "Car Rental",
+        "travelInsurance": "Travel Insurance",
+        "groupBookings": "Group Bookings"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Subscribe for exclusive deals and travel tips",
+        "placeholder": "Enter your email",
+        "subscribe": "Subscribe"
+      },
+      "allRights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "ar": {
+    "brand": {
+      "name": "فنادق فاخرة"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "hotels": "الفنادق",
+      "deals": "العروض",
+      "about": "من نحن",
+      "contact": "اتصل بنا",
+      "login": "تسجيل الدخول",
+      "register": "إنشاء حساب"
+    },
+    "hero": {
+      "title": "ابحث عن إقامة مثالية",
+      "subtitle": "اكتشف الفنادق الفاخرة حول العالم بأسعار لا تضاهى",
+      "title2": "استمتع بالتميز",
+      "subtitle2": "إقامات متميزة للمسافرين المميزين",
+      "title3": "احجز بثقة",
+      "subtitle3": "ضمان أفضل سعر ودعم عملاء على مدار الساعة"
+    },
+    "booking": {
+      "checkIn": "تاريخ الوصول",
+      "checkOut": "تاريخ المغادرة",
+      "guests": "الضيوف",
+      "rooms": "الغرف",
+      "search": "بحث الفنادق",
+      "adults": "البالغون",
+      "children": "الأطفال"
+    },
+    "deals": {
+      "title": "العروض المميزة",
+      "subtitle": "عروض محدودة الوقت على الإقامات الفاخرة"
+    },
+    "testimonials": {
+      "title": "ما يقوله ضيوفنا",
+      "subtitle": "تجارب حقيقية من مسافرين حقيقيين"
+    },
+    "destinations": {
+      "title": "الوجهات الشعبية",
+      "subtitle": "استكشف أكثر الوجهات طلباً في العالم"
+    },
+    "search": {
+      "results": {
+        "title": "نتائج البحث",
+        "count": "تم العثور على <span id=\"results-count\">24</span> فندق"
+      },
+      "filters": {
+        "title": "الفلاتر",
+        "price": "نطاق السعر",
+        "rating": "تقييم النجوم",
+        "roomType": "نوع الغرفة",
+        "amenities": "المرافق",
+        "apply": "تطبيق الفلاتر"
+      },
+      "roomTypes": {
+        "standard": "غرفة عادية",
+        "deluxe": "غرفة فاخرة",
+        "suite": "جناح",
+        "executive": "جناح تنفيذي"
+      },
+      "amenities": {
+        "wifi": "واي فاي مجاني",
+        "parking": "وقوف مجاني",
+        "pool": "مسبح سباحة",
+        "gym": "مركز لياقة",
+        "spa": "سبا",
+        "restaurant": "مطعم"
+      },
+      "sort": {
+        "label": "ترتيب حسب:",
+        "recommended": "موصى به",
+        "priceLow": "السعر (من الأقل للأعلى)",
+        "priceHigh": "السعر (من الأعلى للأقل)",
+        "rating": "تقييم الضيوف",
+        "distance": "المسافة"
+      }
+    },
+    "hotel": {
+      "checkAvailability": "تحقق من التوفر",
+      "tabs": {
+        "overview": "نظرة عامة",
+        "rooms": "الغرف",
+        "amenities": "المرافق",
+        "reviews": "المراجعات",
+        "location": "الموقع"
+      },
+      "overview": {
+        "title": "عن هذا الفندق",
+        "highlights": "المميزات",
+        "freeWifi": "واي فاي عالي السرعة مجاني",
+        "rooftopPool": "مسبح لا نهائي على السطح",
+        "luxurySpa": "سبا فاخر وعافية",
+        "fineDining": "مطعم فاخر",
+        "fitness": "مركز لياقة على مدار الساعة",
+        "concierge": "خدمة كونسيرج شخصية"
+      },
+      "rooms": {
+        "title": "الغرف المتاحة"
+      },
+      "amenities": {
+        "title": "مرافق الفندق",
+        "bedroom": "غرفة النوم",
+        "bathroom": "الحمام",
+        "entertainment": "الترفيه",
+        "wellness": "العافية",
+        "luxuryLinens": "أغطية فاخرة فاخرة",
+        "pillowMenu": "قائمة الوسائد",
+        "blackout": "ستائر معتمة",
+        "minibar": "ميني بار مجهز",
+        "marble": "حمام رخام",
+        "rainfall": "دش مطر",
+        "bathrobes": "رداء فاخر",
+        "toiletries": "مواد عناية فاخرة",
+        "smartTV": "تلفزيون ذكي 55 بوصة",
+        "netflix": "نتفليكس والبث",
+        "surround": "صوت محيطي",
+        "workspace": "مساحة عمل",
+        "fitness24": "مركز لياقة على مدار الساعة",
+        "spaServices": "خدمات سبا كاملة",
+        "pool": "مسبح داخلي مدفأ",
+        "yoga": "استوديو يوجا"
+      },
+      "reviews": {
+        "title": "مراجعات الضيوف"
+      },
+      "location": {
+        "title": "الموقع",
+        "address": "العنوان",
+        "transportation": "المواصلات",
+        "attractions": "معالم قريبة",
+        "subway": "مترو: مربعين إلى 47-50 شارع روكفلر",
+        "train": "قطار: 0.5 ميل إلى محطة بن",
+        "airport": "مطار: 45 دقيقة إلى جاف كيه",
+        "bus": "حافلات: خطوط مباشرة إلى جميع المناطق الرئيسية"
+      },
+      "similar": {
+        "title": "فنادق مشابهة"
+      }
+    },
+    "footer": {
+      "about": {
+        "title": "عن فنادق فاخرة",
+        "description": "شريكك الموثوق لحجوزات الفنادق الفاخرة حول العالم. اعثر على الإقامة المثالية لمغامرتك القادمة."
+      },
+      "quickLinks": {
+        "title": "روابط سريعة",
+        "about": "من نحن",
+        "contact": "اتصل بنا",
+        "faq": "الأسئلة الشائعة",
+        "blog": "المدونة",
+        "careers": "الوظائف"
+      },
+      "services": {
+        "title": "الخدمات",
+        "hotelBooking": "حجز الفنادق",
+        "flightBooking": "حجز الرحلات",
+        "carRental": "تأجير السيارات",
+        "travelInsurance": "تأمين السفر",
+        "groupBookings": "حجوزات المجموعات"
+      },
+      "newsletter": {
+        "title": "النشرة البريدية",
+        "description": "اشترك للحصول على عروض حصرية ونصائح السفر",
+        "placeholder": "أدخل بريدك الإلكتروني",
+        "subscribe": "اشترك"
+      },
+      "allRights": "جميع الحقوق محفوظة.",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة",
+      "cookies": "سياسة ملفات تعريف الارتباط"
+    }
+  }
+}

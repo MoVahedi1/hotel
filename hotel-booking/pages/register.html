@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your Luxury Hotels account">
+    <title>Register - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h1 data-i18n="register.title">Create Account</h1>
+                            <p data-i18n="register.subtitle">Join us to access exclusive deals and manage your bookings</p>
+                        </div>
+                        
+                        <form class="auth-form" id="register-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" data-i18n="register.firstName">First Name</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="firstName" name="firstName" required 
+                                               placeholder="Enter your first name" data-i18n-placeholder="register.firstNamePlaceholder">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName" data-i18n="register.lastName">Last Name</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="lastName" name="lastName" required 
+                                               placeholder="Enter your last name" data-i18n-placeholder="register.lastNamePlaceholder">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" data-i18n="register.email">Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" required 
+                                           placeholder="Enter your email" data-i18n-placeholder="register.emailPlaceholder">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" data-i18n="register.phone">Phone Number</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" 
+                                           placeholder="Enter your phone number" data-i18n-placeholder="register.phonePlaceholder">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" data-i18n="register.password">Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" required 
+                                           placeholder="Create a password" data-i18n-placeholder="register.passwordPlaceholder">
+                                    <button type="button" class="password-toggle" id="password-toggle" aria-label="Toggle password visibility">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength" id="password-strength">
+                                    <div class="strength-bar"></div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword" data-i18n="register.confirmPassword">Confirm Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required 
+                                           placeholder="Confirm your password" data-i18n-placeholder="register.confirmPasswordPlaceholder">
+                                    <button type="button" class="password-toggle" id="confirm-password-toggle" aria-label="Toggle password visibility">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="register.newsletter">Send me exclusive deals and travel tips</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="register.terms">I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn--full btn--large" data-i18n="register.createAccount">Create Account</button>
+                        </form>
+                        
+                        <div class="auth-divider">
+                            <span data-i18n="register.or">OR</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="btn btn-outline btn--full social-btn google">
+                                <i class="fab fa-google"></i>
+                                <span data-i18n="register.google">Sign up with Google</span>
+                            </button>
+                            <button type="button" class="btn btn-outline btn--full social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span data-i18n="register.facebook">Sign up with Facebook</span>
+                            </button>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p data-i18n="register.hasAccount">Already have an account?</p>
+                            <a href="login.html" class="btn-link" data-i18n="register.signIn">Sign In</a>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-info">
+                        <div class="info-card">
+                            <h3 data-i18n="register.benefits.title">Member Benefits</h3>
+                            <ul class="benefits-list">
+                                <li>
+                                    <i class="fas fa-gift"></i>
+                                    <span data-i18n="register.benefits.exclusive">Exclusive member-only deals</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-i18n="register.benefits.priority">Priority customer support</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-star"></i>
+                                    <span data-i18n="register.benefits.rewards">Earn rewards points</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span data-i18n="register.benefits.mobile">Mobile app access</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-bell"></i>
+                                    <span data-i18n="register.benefits.alerts">Price drop alerts</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Registration specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerForm = document.getElementById('register-form');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            const passwordToggle = document.getElementById('password-toggle');
+            const confirmToggle = document.getElementById('confirm-password-toggle');
+            const passwordStrength = document.getElementById('password-strength');
+            
+            // Password visibility toggles
+            passwordToggle.addEventListener('click', function() {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+                this.querySelector('i').className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+            });
+            
+            confirmToggle.addEventListener('click', function() {
+                const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+                confirmPasswordInput.type = type;
+                this.querySelector('i').className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+            });
+            
+            // Password strength checker
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                const strength = checkPasswordStrength(password);
+                updatePasswordStrength(strength);
+            });
+            
+            function checkPasswordStrength(password) {
+                let strength = 0;
+                
+                if (password.length >= 8) strength++;
+                if (password.length >= 12) strength++;
+                if (/[a-z]/.test(password)) strength++;
+                if (/[A-Z]/.test(password)) strength++;
+                if (/[0-9]/.test(password)) strength++;
+                if (/[^a-zA-Z0-9]/.test(password)) strength++;
+                
+                return strength;
+            }
+            
+            function updatePasswordStrength(strength) {
+                const strengthBar = passwordStrength.querySelector('.strength-bar');
+                const strengthText = passwordStrength.querySelector('.strength-text');
+                
+                const strengthLevels = ['Very Weak', 'Weak', 'Fair', 'Good', 'Strong', 'Very Strong'];
+                const strengthColors = ['#dc3545', '#ffc107', '#fd7e14', '#20c997', '#28a745', '#198754'];
+                const strengthWidths = ['16.67%', '33.33%', '50%', '66.67%', '83.33%', '100%'];
+                
+                const level = Math.min(strength, 5);
+                
+                strengthBar.style.width = strengthWidths[level];
+                strengthBar.style.backgroundColor = strengthColors[level];
+                strengthText.textContent = strengthLevels[level];
+            }
+            
+            // Form submission
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(registerForm);
+                const userData = {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    password: formData.get('password'),
+                    confirmPassword: formData.get('confirmPassword'),
+                    newsletter: formData.get('newsletter') === 'on',
+                    terms: formData.get('terms') === 'on'
+                };
+                
+                // Validation
+                if (!userData.firstName || !userData.lastName || !userData.email || !userData.password) {
+                    showNotification('Please fill in all required fields', 'error');
+                    return;
+                }
+                
+                if (userData.password !== userData.confirmPassword) {
+                    showNotification('Passwords do not match', 'error');
+                    return;
+                }
+                
+                if (userData.password.length < 8) {
+                    showNotification('Password must be at least 8 characters', 'error');
+                    return;
+                }
+                
+                if (!userData.terms) {
+                    showNotification('Please accept the terms and conditions', 'error');
+                    return;
+                }
+                
+                // Simulate registration (in real app, this would be an API call)
+                const user = {
+                    id: Date.now(),
+                    ...userData,
+                    createdAt: new Date().toISOString()
+                };
+                
+                // Store user data
+                localStorage.setItem('userData', JSON.stringify(user));
+                localStorage.setItem('userLoggedIn', 'true');
+                localStorage.setItem('userEmail', user.email);
+                
+                // Show success message
+                showNotification('Account created successfully! Redirecting...', 'success');
+                
+                // Redirect to profile
+                setTimeout(() => {
+                    window.location.href = 'profile.html';
+                }, 1500);
+            });
+            
+            // Social registration handlers
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const provider = this.classList.contains('google') ? 'Google' : 'Facebook';
+                    showNotification(`${provider} registration would be implemented here`, 'info');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

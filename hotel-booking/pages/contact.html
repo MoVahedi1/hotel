@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Luxury Hotels - Get in touch with our team">
+    <title>Contact Us - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="contact.hero.title">Get in Touch</h1>
+                    <p data-i18n="contact.hero.subtitle">We're here to help you plan your perfect getaway</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="section contact-content">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <div class="section-header">
+                            <h2 data-i18n="contact.form.title">Send us a Message</h2>
+                            <p data-i18n="contact.form.subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-firstName" data-i18n="contact.form.firstName">First Name *</label>
+                                    <input type="text" id="contact-firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-lastName" data-i18n="contact.form.lastName">Last Name *</label>
+                                    <input type="text" id="contact-lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email" data-i18n="contact.form.email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-phone" data-i18n="contact.form.phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject" data-i18n="contact.form.subject">Subject *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="" data-i18n="contact.form.selectSubject">Select a subject</option>
+                                    <option value="booking" data-i18n="contact.form.bookingHelp">Booking Help</option>
+                                    <option value="payment" data-i18n="contact.form.paymentIssue">Payment Issue</option>
+                                    <option value="account" data-i18n="contact.form.accountHelp">Account Help</option>
+                                    <option value="partnership" data-i18n="contact.form.partnership">Partnership Inquiry</option>
+                                    <option value="feedback" data-i18n="contact.form.feedback">Feedback</option>
+                                    <option value="other" data-i18n="contact.form.other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message" data-i18n="contact.form.message">Message *</label>
+                                <textarea id="contact-message" name="message" rows="6" required 
+                                          placeholder="How can we help you?" data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contact-newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="contact.form.newsletter">Send me exclusive deals and travel tips</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn--large" data-i18n="contact.form.submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-section">
+                        <div class="info-card">
+                            <h3 data-i18n="contact.info.title">Contact Information</h3>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-i18n="contact.info.headquarters">Headquarters</h4>
+                                    <p>1235 Avenue of the Americas<br>New York, NY 10019<br>United States</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-i18n="contact.info.phone">Phone</h4>
+                                    <p><span data-i18n="contact.info.tollFree">Toll-Free:</span> 1-800-LUXURY-1</p>
+                                    <p><span data-i18n="contact.info.international">International:</span> +1-212-555-0123</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-i18n="contact.info.email">Email</h4>
+                                    <p><span data-i18n="contact.info.support">Support:</span> support@luxuryhotels.com</p>
+                                    <p><span data-i18n="contact.info.partnerships">Partnerships:</span> partners@luxuryhotels.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-i18n="contact.info.hours">Business Hours</h4>
+                                    <p><span data-i18n="contact.info.mondayFriday">Monday - Friday:</span> 9:00 AM - 8:00 PM EST</p>
+                                    <p><span data-i18n="contact.info.weekend">Saturday - Sunday:</span> 10:00 AM - 6:00 PM EST</p>
+                                    <p><span data-i18n="contact.info.emergency">24/7 Emergency Support Available</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-card">
+                            <h3 data-i18n="contact.social.title">Follow Us</h3>
+                            <p data-i18n="contact.social.subtitle">Stay connected for travel inspiration and exclusive deals</p>
+                            <div class="social-links-large">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section contact-faq">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.faq.title">Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-i18n="contact.faq.booking.question">How do I make a booking?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="contact.faq.booking.answer">Simply search for your desired hotel, select your dates and room preferences, and click "Book Now". Follow the checkout process to confirm your reservation with our secure payment system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-i18n="contact.faq.cancellation.question">What is your cancellation policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="contact.faq.cancellation.answer">Cancellation policies vary by hotel. Most bookings can be cancelled up to 24 hours before check-in for a full refund. Check the specific hotel's policy during booking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-i18n="contact.faq.payment.question">What payment methods do you accept?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="contact.faq.payment.answer">We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for select corporate bookings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-i18n="contact.faq.support.question">How can I modify my booking?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="contact.faq.support.answer">Log into your account and go to "My Bookings". Select the booking you wish to modify and follow the prompts. Changes are subject to availability and hotel policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Contact page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const contactData = {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    subject: formData.get('subject'),
+                    message: formData.get('message'),
+                    newsletter: formData.get('newsletter') === 'on'
+                };
+                
+                // Validation
+                if (!contactData.firstName || !contactData.lastName || !contactData.email || !contactData.subject || !contactData.message) {
+                    showNotification('Please fill in all required fields', 'error');
+                    return;
+                }
+                
+                if (!validateEmail(contactData.email)) {
+                    showNotification('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                // Simulate form submission
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                setTimeout(() => {
+                    // Store contact message (in real app, this would be sent to server)
+                    let messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                    messages.push({
+                        ...contactData,
+                        id: Date.now(),
+                        createdAt: new Date().toISOString()
+                    });
+                    localStorage.setItem('contactMessages', JSON.stringify(messages));
+                    
+                    // Reset form
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                    
+                    // Show success message
+                    showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+                }, 1500);
+            });
+            
+            // Initialize accordion
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                
+                header.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('active');
+                    
+                    // Close all items
+                    accordionItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.accordion-content').style.maxHeight = null;
+                    });
+                    
+                    // Open clicked item if it wasn't open
+                    if (!isOpen) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

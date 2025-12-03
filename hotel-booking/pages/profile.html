@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Luxury Hotels account dashboard">
+    <title>My Account - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <div class="user-menu">
+                            <button class="user-menu-btn" id="user-menu-btn" aria-label="User menu">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="user-name">John</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="user-dropdown" id="user-dropdown">
+                                <a href="profile.html" class="dropdown-item active">
+                                    <i class="fas fa-user"></i>
+                                    <span data-i18n="profile.menu.profile">My Profile</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-bookmark"></i>
+                                    <span data-i18n="profile.menu.bookings">My Bookings</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span data-i18n="profile.menu.favorites">Favorites</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span data-i18n="profile.menu.settings">Settings</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item logout-btn" id="logout-btn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span data-i18n="profile.menu.logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-layout">
+                    <!-- Sidebar Navigation -->
+                    <aside class="profile-sidebar" role="complementary">
+                        <nav class="profile-nav" aria-label="Profile navigation">
+                            <ul class="profile-nav-list">
+                                <li>
+                                    <a href="#overview" class="nav-link active" data-tab="overview">
+                                        <i class="fas fa-user"></i>
+                                        <span data-i18n="profile.nav.overview">Overview</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#bookings" class="nav-link" data-tab="bookings">
+                                        <i class="fas fa-bookmark"></i>
+                                        <span data-i18n="profile.nav.bookings">My Bookings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#favorites" class="nav-link" data-tab="favorites">
+                                        <i class="fas fa-heart"></i>
+                                        <span data-i18n="profile.nav.favorites">Favorites</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#settings" class="nav-link" data-tab="settings">
+                                        <i class="fas fa-cog"></i>
+                                        <span data-i18n="profile.nav.settings">Settings</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content Area -->
+                    <div class="profile-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane active" id="overview">
+                            <div class="profile-header">
+                                <div class="profile-avatar">
+                                    <img src="https://picsum.photos/seed/user-avatar/150/150" alt="User Avatar" id="user-avatar">
+                                    <button class="avatar-upload" id="avatar-upload" aria-label="Upload avatar">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="profile-info">
+                                    <h1 id="profile-name">John Doe</h1>
+                                    <p class="profile-email" id="profile-email">john.doe@example.com</p>
+                                    <p class="profile-member-since">
+                                        <span data-i18n="profile.memberSince">Member since</span> 
+                                        <span id="member-date">January 2024</span>
+                                    </p>
+                                </div>
+                                <button class="btn btn-outline edit-profile-btn" id="edit-profile-btn" data-i18n="profile.editProfile">Edit Profile</button>
+                            </div>
+
+                            <!-- Stats Cards -->
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-bookmark"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-bookings">12</div>
+                                        <div class="stat-label" data-i18n="profile.stats.bookings">Total Bookings</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-favorites">8</div>
+                                        <div class="stat-label" data-i18n="profile.stats.favorites">Favorite Hotels</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-reviews">5</div>
+                                        <div class="stat-label" data-i18n="profile.stats.reviews">Reviews Written</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="rewards-points">2,450</div>
+                                        <div class="stat-label" data-i18n="profile.stats.rewards">Rewards Points</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Activity -->
+                            <div class="recent-activity">
+                                <h2 data-i18n="profile.recentActivity">Recent Activity</h2>
+                                <div class="activity-list" id="activity-list">
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-title">Booking confirmed at Grand Plaza Hotel</p>
+                                            <p class="activity-date">2 days ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-title">Added Paradise Beach Resort to favorites</p>
+                                            <p class="activity-date">1 week ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-title">Reviewed Mountain Lodge Retreat</p>
+                                            <p class="activity-date">2 weeks ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bookings Tab -->
+                        <div class="tab-pane" id="bookings">
+                            <div class="bookings-header">
+                                <h2 data-i18n="profile.bookings.title">My Bookings</h2>
+                                <div class="bookings-filter">
+                                    <select id="booking-filter" class="filter-select">
+                                        <option value="all" data-i18n="profile.bookings.filter.all">All Bookings</option>
+                                        <option value="upcoming" data-i18n="profile.bookings.filter.upcoming">Upcoming</option>
+                                        <option value="completed" data-i18n="profile.bookings.filter.completed">Completed</option>
+                                        <option value="cancelled" data-i18n="profile.bookings.filter.cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="bookings-list" id="bookings-list">
+                                <!-- Bookings will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Favorites Tab -->
+                        <div class="tab-pane" id="favorites">
+                            <div class="favorites-header">
+                                <h2 data-i18n="profile.favorites.title">Favorite Hotels</h2>
+                                <p data-i18n="profile.favorites.subtitle">Hotels you've saved for quick access</p>
+                            </div>
+                            
+                            <div class="favorites-grid" id="favorites-grid">
+                                <!-- Favorites will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Settings Tab -->
+                        <div class="tab-pane" id="settings">
+                            <div class="settings-header">
+                                <h2 data-i18n="profile.settings.title">Account Settings</h2>
+                            </div>
+                            
+                            <div class="settings-sections">
+                                <!-- Personal Information -->
+                                <div class="settings-section">
+                                    <h3 data-i18n="profile.settings.personal.title">Personal Information</h3>
+                                    <form class="settings-form" id="personal-form">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="settings-firstName" data-i18n="profile.settings.personal.firstName">First Name</label>
+                                                <input type="text" id="settings-firstName" value="John">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="settings-lastName" data-i18n="profile.settings.personal.lastName">Last Name</label>
+                                                <input type="text" id="settings-lastName" value="Doe">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="settings-email" data-i18n="profile.settings.personal.email">Email</label>
+                                            <input type="email" id="settings-email" value="john.doe@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="settings-phone" data-i18n="profile.settings.personal.phone">Phone</label>
+                                            <input type="tel" id="settings-phone" value="+1 234 567 8900">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" data-i18n="profile.settings.personal.save">Save Changes</button>
+                                    </form>
+                                </div>
+
+                                <!-- Preferences -->
+                                <div class="settings-section">
+                                    <h3 data-i18n="profile.settings.preferences.title">Preferences</h3>
+                                    <form class="settings-form" id="preferences-form">
+                                        <div class="form-group">
+                                            <label for="settings-language" data-i18n="profile.settings.preferences.language">Language</label>
+                                            <select id="settings-language">
+                                                <option value="en">English</option>
+                                                <option value="ar">العربية</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="settings-currency" data-i18n="profile.settings.preferences.currency">Currency</label>
+                                            <select id="settings-currency">
+                                                <option value="USD">USD - US Dollar</option>
+                                                <option value="EUR">EUR - Euro</option>
+                                                <option value="GBP">GBP - British Pound</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-options">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="settings-newsletter" checked>
+                                                <span class="checkmark"></span>
+                                                <span data-i18n="profile.settings.preferences.newsletter">Receive newsletter and deals</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-options">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="settings-notifications" checked>
+                                                <span class="checkmark"></span>
+                                                <span data-i18n="profile.settings.preferences.notifications">Email notifications</span>
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" data-i18n="profile.settings.preferences.save">Save Preferences</button>
+                                    </form>
+                                </div>
+
+                                <!-- Security -->
+                                <div class="settings-section">
+                                    <h3 data-i18n="profile.settings.security.title">Security</h3>
+                                    <div class="security-actions">
+                                        <button class="btn btn-outline" id="change-password-btn">
+                                            <i class="fas fa-key"></i>
+                                            <span data-i18n="profile.settings.security.changePassword">Change Password</span>
+                                        </button>
+                                        <button class="btn btn-outline" id="enable-2fa-btn">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span data-i18n="profile.settings.security.enable2FA">Enable Two-Factor Authentication</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Profile specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            if (!localStorage.getItem('userLoggedIn')) {
+                window.location.href = 'login.html?return=' + encodeURIComponent(window.location.pathname);
+                return;
+            }
+
+            // Load user data
+            const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+            const userEmail = localStorage.getItem('userEmail') || 'john.doe@example.com';
+            
+            // Update profile information
+            document.getElementById('user-name').textContent = userData.firstName || 'John';
+            document.getElementById('profile-name').textContent = `${userData.firstName || 'John'} ${userData.lastName || 'Doe'}`;
+            document.getElementById('profile-email').textContent = userEmail;
+            
+            // User menu
+            const userMenuBtn = document.getElementById('user-menu-btn');
+            const userDropdown = document.getElementById('user-dropdown');
+            const logoutBtn = document.getElementById('logout-btn');
+            
+            userMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                userDropdown.classList.toggle('show');
+            });
+            
+            document.addEventListener('click', function() {
+                userDropdown.classList.remove('show');
+            });
+            
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('userLoggedIn');
+                localStorage.removeItem('userEmail');
+                showNotification('Logged out successfully', 'success');
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1000);
+            });
+            
+            // Profile navigation tabs
+            const navLinks = document.querySelectorAll('.profile-nav .nav-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Update active states
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+            
+            // Load mock bookings data
+            loadBookings();
+            
+            // Load mock favorites data
+            loadFavorites();
+            
+            // Settings forms
+            const personalForm = document.getElementById('personal-form');
+            const preferencesForm = document.getElementById('preferences-form');
+            
+            personalForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                showNotification('Personal information updated', 'success');
+            });
+            
+            preferencesForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                showNotification('Preferences saved', 'success');
+            });
+            
+            // Security buttons
+            document.getElementById('change-password-btn').addEventListener('click', function() {
+                showNotification('Password change form would open here', 'info');
+            });
+            
+            document.getElementById('enable-2fa-btn').addEventListener('click', function() {
+                showNotification('Two-factor authentication setup would open here', 'info');
+            });
+        });
+        
+        function loadBookings() {
+            const mockBookings = [
+                {
+                    id: 'BK123456789',
+                    hotel: 'Grand Plaza Hotel',
+                    location: 'New York, USA',
+                    checkin: '2024-03-15',
+                    checkout: '2024-03-20',
+                    status: 'upcoming',
+                    price: 945,
+                    image: '../assets/images/hotels/hotel1-hero.jpg'
+                },
+                {
+                    id: 'BK123456788',
+                    hotel: 'Paradise Beach Resort',
+                    location: 'Miami, USA',
+                    checkin: '2024-02-10',
+                    checkout: '2024-02-15',
+                    status: 'completed',
+                    price: 1625,
+                    image: '../assets/images/hotels/hotel2-hero.jpg'
+                }
+            ];
+            
+            const bookingsList = document.getElementById('bookings-list');
+            bookingsList.innerHTML = mockBookings.map(booking => `
+                <div class="booking-card">
+                    <div class="booking-image">
+                        <img src="${booking.image}" alt="${booking.hotel}">
+                    </div>
+                    <div class="booking-details">
+                        <h3>${booking.hotel}</h3>
+                        <p class="booking-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${booking.location}
+                        </p>
+                        <p class="booking-dates">
+                            <i class="fas fa-calendar"></i>
+                            ${formatDate(booking.checkin)} - ${formatDate(booking.checkout)}
+                        </p>
+                        <div class="booking-footer">
+                            <span class="booking-price">$${booking.price}</span>
+                            <span class="booking-status status-${booking.status}">${booking.status}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function loadFavorites() {
+            const mockFavorites = [
+                {
+                    id: 1,
+                    name: 'Grand Plaza Hotel',
+                    location: 'New York, USA',
+                    rating: 4.5,
+                    price: 189,
+                    image: '../assets/images/hotels/hotel1-hero.jpg'
+                },
+                {
+                    id: 2,
+                    name: 'Paradise Beach Resort',
+                    location: 'Miami, USA',
+                    rating: 4.8,
+                    price: 325,
+                    image: '../assets/images/hotels/hotel2-hero.jpg'
+                }
+            ];
+            
+            const favoritesGrid = document.getElementById('favorites-grid');
+            favoritesGrid.innerHTML = mockFavorites.map(favorite => `
+                <div class="favorite-card">
+                    <div class="favorite-image">
+                        <img src="${favorite.image}" alt="${favorite.name}">
+                        <button class="favorite-remove" data-id="${favorite.id}" aria-label="Remove from favorites">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="favorite-details">
+                        <h3>${favorite.name}</h3>
+                        <p class="favorite-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${favorite.location}
+                        </p>
+                        <div class="favorite-footer">
+                            <span class="favorite-rating">
+                                <i class="fas fa-star"></i>
+                                ${favorite.rating}
+                            </span>
+                            <span class="favorite-price">From $${favorite.price}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add remove from favorites functionality
+            document.querySelectorAll('.favorite-remove').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.favorite-card');
+                    card.style.opacity = '0.5';
+                    setTimeout(() => {
+                        card.remove();
+                        showNotification('Removed from favorites', 'success');
+                    }, 300);
+                });
+            });
+        }
+        
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+    </script>
+</body>
+</html>

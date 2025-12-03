@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Hotels Blog - Travel tips, destination guides, and hotel reviews">
+    <title>Blog - Luxury Hotel Booking</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span data-i18n="brand.name">Luxury Hotels</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="search.html" class="nav-link" data-i18n="nav.hotels">Hotels</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.deals">Deals</a></li>
+                        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-text">EN</span>
+                            </button>
+                        </div>
+                        <a href="login.html" class="btn btn-outline" data-i18n="nav.login">Login</a>
+                        <a href="register.html" class="btn btn-primary" data-i18n="nav.register">Register</a>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="blog.hero.title">Travel Inspiration & Tips</h1>
+                    <p data-i18n="blog.hero.subtitle">Discover amazing destinations, travel hacks, and insider guides from our travel experts</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="section blog-content">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Main Blog Posts -->
+                    <div class="blog-main">
+                        <!-- Featured Post -->
+                        <article class="blog-post featured">
+                            <div class="post-image">
+                                <img src="../assets/images/hotels/hotel1-hero.jpg" alt="Featured post">
+                                <div class="post-category" data-i18n="blog.categories.featured">Featured</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <i class="fas fa-user"></i>
+                                        Sarah Mitchell
+                                    </span>
+                                    <span class="post-date">
+                                        <i class="fas fa-calendar"></i>
+                                        March 15, 2024
+                                    </span>
+                                    <span class="post-read-time">
+                                        <i class="fas fa-clock"></i>
+                                        8 min read
+                                    </span>
+                                </div>
+                                <h2 class="post-title">
+                                    <a href="blog-post.html" data-i18n="blog.posts.featured.title">The Ultimate Guide to Luxury Hotels in New York City</a>
+                                </h2>
+                                <p class="post-excerpt" data-i18n="blog.posts.featured.excerpt">Discover the most luxurious accommodations in the Big Apple, from iconic penthouses with Central Park views to hidden gems in trendy neighborhoods...</p>
+                                <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Posts Grid -->
+                        <div class="posts-grid">
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="../assets/images/hotels/hotel2-hero.jpg" alt="Post thumbnail">
+                                    <div class="post-category" data-i18n="blog.categories.destinations">Destinations</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-author">
+                                            <i class="fas fa-user"></i>
+                                            Michael Chen
+                                        </span>
+                                        <span class="post-date">
+                                            <i class="fas fa-calendar"></i>
+                                            March 12, 2024
+                                        </span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="blog-post.html" data-i18n="blog.posts.destination1.title">Hidden Paradise: 10 Secret Beach Resorts in the Caribbean</a>
+                                    </h3>
+                                    <p class="post-excerpt" data-i18n="blog.posts.destination1.excerpt">Escape the crowds and discover pristine beaches, crystal-clear waters, and exclusive luxury at these Caribbean hideaways...</p>
+                                    <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="../assets/images/hotels/hotel3-hero.jpg" alt="Post thumbnail">
+                                    <div class="post-category" data-i18n="blog.categories.tips">Travel Tips</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-author">
+                                            <i class="fas fa-user"></i>
+                                            Emily Rodriguez
+                                        </span>
+                                        <span class="post-date">
+                                            <i class="fas fa-calendar"></i>
+                                            March 10, 2024
+                                        </span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="blog-post.html" data-i18n="blog.posts.tips1.title">15 Travel Hacks That Will Change How You Vacation Forever</a>
+                                    </h3>
+                                    <p class="post-excerpt" data-i18n="blog.posts.tips1.excerpt">From packing secrets to booking strategies, these insider tips will save you time, money, and stress on your next trip...</p>
+                                    <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="../assets/images/hotels/hotel-spa.jpg" alt="Post thumbnail">
+                                    <div class="post-category" data-i18n="blog.categories.wellness">Wellness</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-author">
+                                            <i class="fas fa-user"></i>
+                                            David Kim
+                                        </span>
+                                        <span class="post-date">
+                                            <i class="fas fa-calendar"></i>
+                                            March 8, 2024
+                                        </span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="blog-post.html" data-i18n="blog.posts.wellness1.title">The Rise of Wellness Tourism: Hotels That Heal Your Body and Soul</a>
+                                    </h3>
+                                    <p class="post-excerpt" data-i18n="blog.posts.wellness1.excerpt">Explore the world's most transformative wellness retreats, from ancient healing traditions to cutting-edge spa technologies...</p>
+                                    <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="../assets/images/hotels/hotel-restaurant.jpg" alt="Post thumbnail">
+                                    <div class="post-category" data-i18n="blog.categories.dining">Dining</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-author">
+                                            <i class="fas fa-user"></i>
+                                            Lisa Anderson
+                                        </span>
+                                        <span class="post-date">
+                                            <i class="fas fa-calendar"></i>
+                                            March 5, 2024
+                                        </span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="blog-post.html" data-i18n="blog.posts.dining1.title">Michelin Stars and Ocean Views: World's Best Hotel Restaurants</a>
+                                    </h3>
+                                    <p class="post-excerpt" data-i18n="blog.posts.dining1.excerpt">From underwater dining rooms to rooftop Michelin-starred experiences, these hotel restaurants redefine culinary excellence...</p>
+                                    <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="../assets/images/hotels/hotel-gym.jpg" alt="Post thumbnail">
+                                    <div class="post-category" data-i18n="blog.categories.luxury">Luxury</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-author">
+                                            <i class="fas fa-user"></i>
+                                            James Wilson
+                                        </span>
+                                        <span class="post-date">
+                                            <i class="fas fa-calendar"></i>
+                                            March 1, 2024
+                                        </span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="blog-post.html" data-i18n="blog.posts.luxury1.title">Beyond Five Stars: What Makes a Hotel Truly Extraordinary</a>
+                                    </h3>
+                                    <p class="post-excerpt" data-i18n="blog.posts.luxury1.excerpt">We went beyond the traditional rating system to discover what truly creates unforgettable hotel experiences...</p>
+                                    <a href="blog-post.html" class="read-more" data-i18n="blog.readMore">Read More</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="load-more-container">
+                            <button class="btn btn-outline load-more-btn" id="load-more" data-i18n="blog.loadMore">Load More Articles</button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar" role="complementary">
+                        <!-- Categories -->
+                        <div class="sidebar-section">
+                            <h3 data-i18n="blog.sidebar.categories.title">Categories</h3>
+                            <ul class="category-list">
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.destinations">Destinations</span>
+                                        <span class="category-count">24</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.tips">Travel Tips</span>
+                                        <span class="category-count">18</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.luxury">Luxury</span>
+                                        <span class="category-count">15</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.dining">Dining</span>
+                                        <span class="category-count">12</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.wellness">Wellness</span>
+                                        <span class="category-count">8</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link">
+                                        <span data-i18n="blog.categories.reviews">Hotel Reviews</span>
+                                        <span class="category-count">31</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts -->
+                        <div class="sidebar-section">
+                            <h3 data-i18n="blog.sidebar.popular.title">Popular Posts</h3>
+                            <ul class="popular-posts">
+                                <li class="popular-post">
+                                    <a href="blog-post.html">
+                                        <img src="../assets/images/hotels/hotel1-hero.jpg" alt="Popular post">
+                                        <div class="popular-post-content">
+                                            <h4>The 50 Most Beautiful Hotels in the World</h4>
+                                            <span class="popular-post-meta">2.5k views</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-post">
+                                    <a href="blog-post.html">
+                                        <img src="../assets/images/hotels/hotel2-hero.jpg" alt="Popular post">
+                                        <div class="popular-post-content">
+                                            <h4>How to Find Last-Minute Hotel Deals</h4>
+                                            <span class="popular-post-meta">1.8k views</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-post">
+                                    <a href="blog-post.html">
+                                        <img src="../assets/images/hotels/hotel3-hero.jpg" alt="Popular post">
+                                        <div class="popular-post-content">
+                                            <h4>Luxury Hotels That Won't Break the Bank</h4>
+                                            <span class="popular-post-meta">1.2k views</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-section newsletter-sidebar">
+                            <h3 data-i18n="blog.sidebar.newsletter.title">Travel Newsletter</h3>
+                            <p data-i18n="blog.sidebar.newsletter.subtitle">Get weekly travel inspiration and exclusive deals delivered to your inbox</p>
+                            <form class="newsletter-form" id="blog-newsletter-form">
+                                <input type="email" placeholder="Enter your email" required data-i18n-placeholder="blog.sidebar.newsletter.placeholder">
+                                <button type="submit" class="btn btn-primary" data-i18n="blog.sidebar.newsletter.subscribe">Subscribe</button>
+                            </form>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="sidebar-section">
+                            <h3 data-i18n="blog.sidebar.tags.title">Popular Tags</h3>
+                            <div class="tags-cloud">
+                                <a href="#" class="tag" data-i18n="blog.tags.luxury">luxury</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.travel">travel</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.hotels">hotels</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.beach">beach</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.resort">resort</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.wellness">wellness</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.dining">dining</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.spa">spa</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.adventure">adventure</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.family">family</a>
+                                <a href="#" class="tag" data-i18n="blog.tags.romantic">romantic</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">About Luxury Hotels</h3>
+                    <p data-i18n="footer.about.description">Your trusted partner for luxury hotel bookings worldwide. Find the perfect stay for your next adventure.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.quickLinks.title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.quickLinks.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.quickLinks.contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer.quickLinks.faq">FAQ</a></li>
+                        <li><a href="blog.html" data-i18n="footer.quickLinks.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.quickLinks.careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.services.title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.services.hotelBooking">Hotel Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.flightBooking">Flight Booking</a></li>
+                        <li><a href="#" data-i18n="footer.services.carRental">Car Rental</a></li>
+                        <li><a href="#" data-i18n="footer.services.travelInsurance">Travel Insurance</a></li>
+                        <li><a href="#" data-i18n="footer.services.groupBookings">Group Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.newsletter.title">Newsletter</h3>
+                    <p data-i18n="footer.newsletter.description">Subscribe for exclusive deals and travel tips</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required data-i18n-placeholder="footer.newsletter.placeholder">
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Luxury Hotels. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    
+    <script>
+        // Blog page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Newsletter form
+            const blogNewsletterForm = document.getElementById('blog-newsletter-form');
+            
+            blogNewsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                if (validateEmail(email)) {
+                    showNotification('Successfully subscribed to newsletter!', 'success');
+                    this.reset();
+                } else {
+                    showNotification('Please enter a valid email address', 'error');
+                }
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('load-more');
+            let postsLoaded = 6;
+            
+            loadMoreBtn.addEventListener('click', function() {
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                
+                // Simulate loading more posts
+                setTimeout(() => {
+                    // In a real app, this would load more posts from the server
+                    postsLoaded += 3;
+                    
+                    if (postsLoaded >= 12) {
+                        this.textContent = 'No more posts to load';
+                        this.disabled = true;
+                        this.classList.add('disabled');
+                    } else {
+                        this.textContent = 'Load More Articles';
+                        this.disabled = false;
+                    }
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Plaza Hotel",
+    "rating": 4.5,
+    "location": {
+      "city": "New York",
+      "country": "USA",
+      "address": "1235 Avenue of the Americas, New York, NY 10019",
+      "coordinates": { "lat": 40.7614, "lng": -73.9776 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-spa.jpg"
+    ],
+    "description": "Experience luxury at its finest at the Grand Plaza Hotel, located in the heart of Manhattan. Our 5-star establishment combines elegant accommodations with world-class service, offering guests an unforgettable stay in New York City.",
+    "price": 189,
+    "originalPrice": 259,
+    "discount": 27,
+    "amenities": ["WiFi", "Pool", "Gym", "Spa", "Restaurant", "Bar", "Parking"],
+    "rooms": [
+      {
+        "id": 101,
+        "type": "Standard Room",
+        "price": 189,
+        "maxOccupancy": 2,
+        "beds": "1 Queen Bed",
+        "size": "35 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["City View", "Work Desk", "Mini Bar", "Rainfall Shower"]
+      },
+      {
+        "id": 102,
+        "type": "Deluxe Room",
+        "price": 259,
+        "maxOccupancy": 3,
+        "beds": "1 King Bed",
+        "size": "45 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["City View", "Seating Area", "Mini Bar", "Rainfall Shower", "Bathtub"]
+      },
+      {
+        "id": 103,
+        "type": "Executive Suite",
+        "price": 389,
+        "maxOccupancy": 4,
+        "beds": "1 King Bed + 1 Sofa Bed",
+        "size": "65 sqm",
+        "images": ["suite-room-1.jpg"],
+        "features": ["Panoramic View", "Living Room", "Work Desk", "Mini Bar", "Rainfall Shower", "Bathtub", "Kitchenette"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "user": "John Smith",
+        "rating": 5,
+        "date": "2024-01-15",
+        "comment": "Absolutely amazing stay! The staff was incredibly attentive and the room was spotless. The location is perfect for exploring Manhattan.",
+        "helpful": 24
+      },
+      {
+        "id": 2,
+        "user": "Emily Johnson",
+        "rating": 4,
+        "date": "2024-01-10",
+        "comment": "Beautiful hotel with excellent amenities. The rooftop pool has stunning views. Would definitely stay here again.",
+        "helpful": 18
+      },
+      {
+        "id": 3,
+        "user": "Michael Chen",
+        "rating": 5,
+        "date": "2024-01-05",
+        "comment": "Perfect location and luxurious rooms. The concierge service helped us plan amazing activities. Highly recommended!",
+        "helpful": 31
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Paradise Beach Resort",
+    "rating": 4.8,
+    "location": {
+      "city": "Miami",
+      "country": "USA",
+      "address": "1 Ocean Drive, Miami Beach, FL 33139",
+      "coordinates": { "lat": 25.7814, "lng": -80.1870 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-restaurant.jpg"
+    ],
+    "description": "Escape to paradise at our beachfront resort in Miami. Enjoy pristine beaches, world-class dining, and luxurious accommodations with breathtaking ocean views.",
+    "price": 325,
+    "originalPrice": 450,
+    "discount": 28,
+    "amenities": ["WiFi", "Beach Access", "Pool", "Gym", "Spa", "Restaurant", "Bar", "Water Sports"],
+    "rooms": [
+      {
+        "id": 201,
+        "type": "Ocean View Room",
+        "price": 325,
+        "maxOccupancy": 2,
+        "beds": "1 King Bed",
+        "size": "40 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["Ocean View", "Balcony", "Mini Bar", "Rainfall Shower"]
+      },
+      {
+        "id": 202,
+        "type": "Beach Suite",
+        "price": 485,
+        "maxOccupancy": 4,
+        "beds": "1 King Bed + 1 Sofa Bed",
+        "size": "75 sqm",
+        "images": ["suite-room-1.jpg"],
+        "features": ["Ocean View", "Balcony", "Living Room", "Mini Bar", "Rainfall Shower", "Bathtub"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 4,
+        "user": "Sarah Williams",
+        "rating": 5,
+        "date": "2024-01-18",
+        "comment": "Incredible beachfront location! The resort is stunning and the service is impeccable. Waking up to ocean views was magical.",
+        "helpful": 42
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mountain Lodge Retreat",
+    "rating": 4.6,
+    "location": {
+      "city": "Aspen",
+      "country": "USA",
+      "address": "1000 Mountain Road, Aspen, CO 81611",
+      "coordinates": { "lat": 39.1911, "lng": -106.8175 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-gym.jpg"
+    ],
+    "description": "Experience the ultimate mountain getaway in Aspen. Our luxury lodge offers ski-in/ski-out access, cozy fireplaces, and breathtaking mountain views.",
+    "price": 425,
+    "originalPrice": 550,
+    "discount": 23,
+    "amenities": ["WiFi", "Ski Access", "Pool", "Gym", "Spa", "Restaurant", "Bar", "Fireplace"],
+    "rooms": [
+      {
+        "id": 301,
+        "type": "Mountain View Room",
+        "price": 425,
+        "maxOccupancy": 2,
+        "beds": "1 Queen Bed",
+        "size": "38 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["Mountain View", "Fireplace", "Mini Bar", "Heated Bathroom Floors"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 5,
+        "user": "David Martinez",
+        "rating": 5,
+        "date": "2024-01-12",
+        "comment": "Perfect ski vacation spot! The lodge is beautiful and the ski access is unbeatable. The fireplace in the room was so cozy.",
+        "helpful": 28
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Urban Boutique Hotel",
+    "rating": 4.3,
+    "location": {
+      "city": "San Francisco",
+      "country": "USA",
+      "address": "500 Union Street, San Francisco, CA 94133",
+      "coordinates": { "lat": 37.7975, "lng": -122.4100 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-spa.jpg"
+    ],
+    "description": "Discover urban sophistication in the heart of San Francisco. Our boutique hotel combines modern design with personalized service for an unforgettable city experience.",
+    "price": 275,
+    "originalPrice": 350,
+    "discount": 21,
+    "amenities": ["WiFi", "Roofop Bar", "Gym", "Spa", "Restaurant", "Concierge", "Pet Friendly"],
+    "rooms": [
+      {
+        "id": 401,
+        "type": "City View Room",
+        "price": 275,
+        "maxOccupancy": 2,
+        "beds": "1 King Bed",
+        "size": "32 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["City View", "Work Desk", "Mini Bar", "Smart TV"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 6,
+        "user": "Lisa Anderson",
+        "rating": 4,
+        "date": "2024-01-08",
+        "comment": "Great location and beautiful design. The rooftop bar has amazing views of the city. Staff was very helpful.",
+        "helpful": 19
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lakeside Resort & Spa",
+    "rating": 4.7,
+    "location": {
+      "city": "Lake Tahoe",
+      "country": "USA",
+      "address": "200 Lakeshore Drive, Lake Tahoe, NV 89449",
+      "coordinates": { "lat": 39.0968, "lng": -120.0324 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-restaurant.jpg"
+    ],
+    "description": "Escape to tranquility at our lakeside retreat. Enjoy stunning lake views, world-class spa facilities, and endless outdoor activities in every season.",
+    "price": 385,
+    "originalPrice": 480,
+    "discount": 20,
+    "amenities": ["WiFi", "Lake Access", "Pool", "Gym", "Spa", "Restaurant", "Marina", "Hiking Trails"],
+    "rooms": [
+      {
+        "id": 501,
+        "type": "Lake View Suite",
+        "price": 385,
+        "maxOccupancy": 3,
+        "beds": "1 King Bed",
+        "size": "55 sqm",
+        "images": ["suite-room-1.jpg"],
+        "features": ["Lake View", "Balcony", "Living Room", "Mini Bar", "Fireplace"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 7,
+        "user": "Robert Taylor",
+        "rating": 5,
+        "date": "2024-01-14",
+        "comment": "Absolutely stunning location! The lake views are incredible and the spa facilities are world-class. Perfect relaxation getaway.",
+        "helpful": 35
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Desert Oasis Resort",
+    "rating": 4.4,
+    "location": {
+      "city": "Scottsdale",
+      "country": "USA",
+      "address": "6000 E Camelback Road, Scottsdale, AZ 85251",
+      "coordinates": { "lat": 33.5092, "lng": -111.9250 }
+    },
+    "images": [
+      "hotel1-hero.jpg",
+      "hotel2-hero.jpg",
+      "hotel3-hero.jpg",
+      "hotel-gym.jpg"
+    ],
+    "description": "Experience desert luxury at its finest. Our resort features stunning desert landscapes, championship golf courses, and award-winning dining.",
+    "price": 295,
+    "originalPrice": 380,
+    "discount": 22,
+    "amenities": ["WiFi", "Golf Course", "Pool", "Gym", "Spa", "Restaurant", "Tennis Courts"],
+    "rooms": [
+      {
+        "id": 601,
+        "type": "Desert View Room",
+        "price": 295,
+        "maxOccupancy": 2,
+        "beds": "1 King Bed",
+        "size": "36 sqm",
+        "images": ["deluxe-room-1.jpg"],
+        "features": ["Desert View", "Private Patio", "Mini Bar", "Outdoor Shower"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 8,
+        "user": "Jennifer Brown",
+        "rating": 4,
+        "date": "2024-01-11",
+        "comment": "Beautiful resort with amazing desert views. The golf course is fantastic and the pools are incredible. Great service!",
+        "helpful": 22
+      }
+    ]
+  }
+]

@@ -1,0 +1,746 @@
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Extra Small Devices (Phones, <576px) */
+@media (max-width: 575px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-3);
+  }
+
+  /* Typography */
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  h3 { font-size: var(--text-xl); }
+
+  /* Navigation */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: start;
+    padding: var(--space-6);
+    transition: left var(--transition-normal);
+    z-index: var(--z-modal);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+  }
+
+  .nav-actions .btn {
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: flex;
+    z-index: var(--z-modal);
+  }
+
+  .nav-toggle.active .hamburger {
+    background: transparent;
+  }
+
+  .nav-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 500px;
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .search-container {
+    width: 95%;
+    bottom: var(--space-4);
+  }
+
+  .search-form {
+    padding: var(--space-4);
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .form-group--submit {
+    margin-top: var(--space-2);
+  }
+
+  /* Guest Selector */
+  .guest-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Slider Controls */
+  .slider-controls {
+    display: none;
+  }
+
+  /* Featured Deals */
+  .deals-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .deal-card {
+    margin-bottom: var(--space-4);
+  }
+
+  /* Testimonials */
+  .testimonial-btn {
+    display: none;
+  }
+
+  .testimonial-content {
+    padding: var(--space-6);
+  }
+
+  .testimonial-text {
+    font-size: var(--text-base);
+  }
+
+  /* Destinations */
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Search Results */
+  .search-summary-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .search-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .search-filters {
+    position: static;
+    order: 2;
+  }
+
+  .search-results {
+    order: 1;
+  }
+
+  /* Hotel Cards */
+  .hotel-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-card-image {
+    height: 200px;
+  }
+
+  .hotel-card-footer {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  .hotel-actions {
+    justify-content: stretch;
+  }
+
+  .hotel-actions .btn {
+    flex: 1;
+  }
+
+  /* Hotel Detail */
+  .hotel-hero {
+    height: 400px;
+  }
+
+  .main-image {
+    height: 300px;
+  }
+
+  .thumbnail-strip {
+    display: none;
+  }
+
+  .hotel-header {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  .hotel-price {
+    text-align: left;
+  }
+
+  .booking-fields {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabs */
+  .tabs-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+  }
+
+  /* Reviews */
+  .reviews-header {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .rating-row {
+    grid-template-columns: 20px 1fr 30px;
+    gap: var(--space-2);
+  }
+
+  /* Location */
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Similar Hotels */
+  .similar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  /* Forms */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Checkout */
+  .checkout-steps {
+    flex-direction: column;
+  }
+
+  .step-indicator {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-line {
+    display: none;
+  }
+
+  /* Room Cards */
+  .room-card {
+    grid-template-columns: 1fr;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pagination */
+  .pagination {
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .page-info {
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
+}
+
+/* Small Devices (Tablets, 576px - 991px) */
+@media (min-width: 576px) and (max-width: 991px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Navigation */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: start;
+    padding: var(--space-6);
+    transition: left var(--transition-normal);
+    z-index: var(--z-modal);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+  }
+
+  .nav-actions .btn {
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: flex;
+    z-index: var(--z-modal);
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 550px;
+  }
+
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .form-group--submit {
+    grid-column: span 2;
+  }
+
+  /* Featured Deals */
+  .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  /* Destinations */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Search Results */
+  .search-layout {
+    grid-template-columns: 250px 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Hotel Cards */
+  .hotel-card {
+    grid-template-columns: 250px 1fr;
+  }
+
+  /* Hotel Detail */
+  .hotel-header {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  .booking-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Reviews */
+  .reviews-header {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Location */
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Similar Hotels */
+  .similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Room Cards */
+  .room-card {
+    grid-template-columns: 250px 1fr;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium Devices (Desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Featured Deals */
+  .deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Destinations */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Similar Hotels */
+  .similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Room Cards */
+  .room-card {
+    grid-template-columns: 280px 1fr;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Devices (Large Desktops, ≥1200px) */
+@media (min-width: 1200px) {
+  /* Container */
+  .container {
+    max-width: 1400px;
+  }
+
+  /* Featured Deals */
+  .deals-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Destinations */
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Similar Hotels */
+  .similar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===================================
+   Special Responsive Considerations
+   =================================== */
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .card:hover {
+    transform: none;
+  }
+  
+  .deal-card:hover {
+    transform: none;
+  }
+  
+  .hotel-card:hover {
+    transform: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  /* Increase touch targets */
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .counter-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .view-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .tab-btn {
+    min-height: 44px;
+  }
+  
+  /* Larger spacing for touch */
+  .form-group {
+    margin-bottom: var(--space-6);
+  }
+  
+  .filter-group {
+    margin-bottom: var(--space-8);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize images for retina displays */
+  .hero-slide {
+    background-size: cover;
+  }
+  
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for users who prefer reduced motion */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-slide {
+    transition: none;
+  }
+  
+  .testimonial-track {
+    transition: none;
+  }
+  
+  .deal-card:hover,
+  .hotel-card:hover,
+  .room-card:hover {
+    transform: none;
+  }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* This is a placeholder for future dark mode implementation */
+  /* Currently not implemented but ready for future enhancement */
+}
+
+/* Print Styles */
+@media print {
+  /* Hide unnecessary elements for printing */
+  .header,
+  .footer,
+  .nav-toggle,
+  .slider-controls,
+  .testimonial-btn,
+  .btn,
+  .pagination,
+  .view-toggle,
+  .sort-options,
+  .newsletter-form {
+    display: none !important;
+  }
+  
+  /* Ensure text is readable */
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+  
+  /* Remove shadows and backgrounds */
+  .card,
+  .deal-card,
+  .hotel-card,
+  .room-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  /* Ensure links are visible */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  /* Page breaks */
+  .hotel-card,
+  .room-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    height: 400px;
+  }
+  
+  .hero-title {
+    font-size: var(--text-2xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+  
+  .search-container {
+    bottom: var(--space-2);
+  }
+  
+  .search-form {
+    padding: var(--space-3);
+  }
+}
+
+/* Very Large Screens */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero {
+    height: 700px;
+  }
+  
+  .hero-title {
+    font-size: var(--text-5xl);
+  }
+  
+  .deals-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .destinations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .similar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Accessibility Improvements for High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-blue: #0000FF;
+    --primary-dark: #000080;
+    --gray-300: #666666;
+    --gray-600: #333333;
+  }
+  
+  .btn {
+    border-width: 2px;
+  }
+  
+  .card {
+    border: 2px solid var(--gray-600);
+  }
+  
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* RTL Specific Responsive Adjustments */
+html[dir="rtl"] {
+  @media (max-width: 575px) {
+    .nav-menu.active {
+      left: auto;
+      right: 0;
+    }
+    
+    .guest-dropdown {
+      left: auto;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 991px) {
+    .nav-menu.active {
+      left: auto;
+      right: 0;
+    }
+  }
+}
